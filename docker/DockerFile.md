@@ -193,4 +193,20 @@ docker build -t cmd-tet -f aaa.DockerFile .
 ```shell
 docker run cmd-test echo "aaaa"
 ```
-可以替换成任何命令。
+可以替换成任何命令
+而用 ENTRYPOINT 就不会：
+```shell
+FROM node:18-alpine3.14
+
+ENTRYPOINT ["echo","codertao","18"]
+```
+build
+```shell
+docker build -t cmd-test -f aaa.DockerFile .
+```
+docker run:
+```shell
+docker run cmd-test echo "bbb"
+```
+可以看到，现在 dockerfile 里 ENTRYPOINT 的命令依然执行了
+![[Pasted image 20231114224953.png]]
