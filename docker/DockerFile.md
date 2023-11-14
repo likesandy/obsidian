@@ -151,7 +151,9 @@ ENV aaa=${aaa} \
 
 CMD ["node", "/app/test.js"]
 ```
+构建镜像
 ```shell
-docker build --build-arg aaa=3 --build-arg bbb=4 -t arg-test -f Dockerfile .
+docker build --build-arg aaa=3 --build-arg bbb=4 -t arg-test .
 ```
 通过 `--build-arg xxx=yyy` 传入 ARG 参数的值
+
