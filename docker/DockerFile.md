@@ -185,9 +185,11 @@ CMD ["echo","codertao","18"]
 docker build -t cmd-tet -f aaa.DockerFile .
 ```
 ![[Pasted image 20231114223555.png]]
-启动容器：
-```shell
-docker runc cmd-test
-```
 
-没有指定 --name 时，会生成一个随机容器名
+启动镜像，如果没有指定 --name 时，会生成一个随机容器名
+![[Pasted image 20231114223752.png]]
+这不是重点
+重点是用 CMD 的时候，启动命令是可以重写的：
+```shell
+docker run cmd-test echo "aaaa"
+```
