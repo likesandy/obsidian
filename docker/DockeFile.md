@@ -41,7 +41,6 @@ CMD 指定容器跑起来之后执行的命令，这里就是执行 http-server 
 
 把这个文件保存为 Dockerfile，然后在同级添加一个 index.html
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7005f8b8-456a-4edc-8495-fb4f4c9956fc/90340236-8785-4c2a-ba41-521a05d1bdba/Untitled.png)
 
 然后通过 **docker build** 就可以根据这个 dockerfile 来生成镜像
 
@@ -50,39 +49,25 @@ CMD 指定容器跑起来之后执行的命令，这里就是执行 http-server 
 docker build -t aaa:ccc .
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7005f8b8-456a-4edc-8495-fb4f4c9956fc/12030a02-9c82-41aa-ab6b-cda4a0024bca/Untitled.png)
-
 FROM 是继承一个基础镜像，看输出也可以看出来，前面都是 node 镜像的内容，会一层层下载下来
 
 最后才是本地的我们添加的那些
 
 这时你在 desktop 的 images 列表里就可以看到这个镜像了：
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7005f8b8-456a-4edc-8495-fb4f4c9956fc/223333f9-a496-41d2-a403-b9a19de5564e/Untitled.png)
-
 然后执行 docker run 把这个镜像跑起来，用 desktop 我们就直接点击 run 按钮了：
 
 指定容器名、映射的端口、点击 run：
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7005f8b8-456a-4edc-8495-fb4f4c9956fc/2828c36a-24c9-40f5-9ced-00398f21774f/Untitled.png)
-
 当你看到日志的时候，说明就成功了
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7005f8b8-456a-4edc-8495-fb4f4c9956fc/3fe646ae-1dca-4de9-b132-a3222a04937d/Untitled.png)
-
-访问 [](http://localhost:8888/)[http://localhost:8888](http://localhost:8888) 就可以看到我们在 html 写的内容了：
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7005f8b8-456a-4edc-8495-fb4f4c9956fc/eb1f0082-e2fe-4092-b197-bcd87b075891/Untitled.png)
+访问 [http://localhost:8888](http://localhost:8888) 就可以看到我们在 html 写的内容了：
 
 在容器内页打印了一条访问日志：
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7005f8b8-456a-4edc-8495-fb4f4c9956fc/a446f35b-d4bc-43fa-a1ad-1edd9bd4913d/Untitled.png)
 
 至此，我们写的第一个 dockerfile 和 build 出的第一个镜像就跑成功了！
 
 我们在 files 里看看 /app 下是啥内容：
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7005f8b8-456a-4edc-8495-fb4f4c9956fc/26b97863-c8ca-4203-8280-a8ff3c1d245c/Untitled.png)
 
 我们想修改静态文件怎么办呢？
 
@@ -115,8 +100,6 @@ CMD ["http-server", "-p", "8080"]
 # -f 指定文件
 docker build -t aaa:ddd -f Dockerfile2 .
 ```
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7005f8b8-456a-4edc-8495-fb4f4c9956fc/1d0a4220-505b-40a6-9a56-ee9d10f5e674/Untitled.png)
 
 构建完之后再 run 一下这个新镜像：
 ![[Pasted image 20231113223144.png]]

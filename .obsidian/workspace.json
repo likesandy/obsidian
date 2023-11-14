@@ -4,22 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "0cf783d0cdcef1a3",
+        "id": "09895652c36db037",
         "type": "tabs",
         "children": [
           {
-            "id": "93cb9071a79395f3",
+            "id": "dabf62c6e6a7cc5b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docker/DockeFile.md"
+              }
+            }
+          },
+          {
+            "id": "56b7d11c2ecb0919",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "nestjs/12312132.md",
+                "file": "docker/DockeFile.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "nestjs/12312132.md",
+                "file": "docker/DockeFile.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "nestjs/12312132.md",
+                "file": "docker/DockeFile.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "nestjs/12312132.md"
+                "file": "docker/DockeFile.md"
               }
             }
           },
@@ -142,7 +153,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -154,26 +166,27 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "93cb9071a79395f3",
+  "active": "990de575a3596e03",
   "lastOpenFiles": [
-    "nestjs/12312132.md",
-    "nestjs/test.md",
+    "docker/public/Pasted image 20231113222713.png",
+    "docker/public/Pasted image 20231113223144.png",
+    "docker/public/Pasted image 20231113223256.png",
+    "docker/public/Pasted image 20231113223334.png",
+    "docker/public/Pasted image 20231113223423.png",
+    "docker/public/Pasted image 20231113223554.png",
+    "docker/public/Pasted image 20231113223617.png",
+    "docker/public/Pasted image 20231113224541.png",
+    "docker/public/Pasted image 20231113225541.png",
+    "docker/DockeFile.md",
     "nestjs/nestjs关联dockerFile.md",
+    "nestjs/test.md",
+    "nestjs/12312132.md",
     "nestjs/12312312.md",
     "12312321312",
     "conflict-files-obsidian-git.md",
     "obsidian-notebook",
     "nestjs/public/Pasted image 20231113235432.png",
     "nestjs/public/Pasted image 20231113235155.png",
-    "nestjs/public/Pasted image 20231113234541.png",
-    "nestjs/public/Pasted image 20231113234500.png",
-    "nestjs/public/Pasted image 20231113234417.png",
-    "nestjs/public/Pasted image 20231113234406.png",
-    "nestjs/public/Pasted image 20231113234347.png",
-    "nestjs/public/Pasted image 20231113234311.png",
-    "nestjs/public/Pasted image 20231113233404.png",
-    "nestjs/public/Pasted image 20231113233221.png",
-    "docker/DockeFile.md",
     "未命名.canvas",
     "nestjs/public",
     "nestjs/dockfile.md",
