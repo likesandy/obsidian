@@ -193,6 +193,7 @@ docker build -t cmd-tet -f aaa.DockerFile .
 ```shell
 docker run cmd-test echo "aaaa"
 ```
+![[Pasted image 20231114225345.png]]
 可以替换成任何命令
 而用 ENTRYPOINT 就不会：
 ```shell
@@ -202,11 +203,37 @@ ENTRYPOINT ["echo","codertao","18"]
 ```
 build
 ```shell
-docker build -t cmd-test -f aaa.DockerFile .
+docker build -t cmd-test2 -f aaa.DockerFile .
 ```
 docker run:
 ```shell
-docker run cmd-test echo "bbb"
+docker run cmd-test2 echo "bbb"
 ```
 可以看到，现在 dockerfile 里 ENTRYPOINT 的命令依然执行了
-![[Pasted image 20231114224953.png]]
+![[Pasted image 20231114225453.png]]
+docker run 传入的参数作为了 echo 的额外参数
+一般还是 CMD 用的多点，可以灵活修改启动命令
+
+其实 ENTRYPOINT 和 CMD 是可以结合使用的
+比如这样：
+```DockerFile
+FROM node:18-alpine3.14
+
+ENTRYPOINT ["echo","codertao"]
+
+CMD [ "18" ]
+
+```
+build
+```shell
+docker build -t cmd-test3 -f aaa.DockerFile .
+```
+run
+```shell
+docker run cmd-test3 
+docker run cmd-test3 21
+```
+![[Pasted image 20231114225815.png]]
+当没传参数的时候，执行的是 ENTRYPOINT + CMD 组合的命令，而传入参数的时候，只有 CMD 部分会被覆盖
+这就起到了默认值的作用
+## 
