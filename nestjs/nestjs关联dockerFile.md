@@ -1,4 +1,4 @@
-我们思考一个问题[[DockeFile]]是在哪里build的？docker里?
+我们思考一个问题[[DockerFile]]是在哪里build的？docker里?
 答案是在守护进程 `docker daemon`
 
 命令行工具会和 docker daemon 交互来实现各种功能

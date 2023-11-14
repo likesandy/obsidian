@@ -123,3 +123,31 @@ docker build -t aaa:ddd -f Dockerfile2 .
 在镜像详情可以看到 mysql 的 dockerfile，确实声明了 volume
 ![[Pasted image 20231113225541.png]]
 这样就能保证数据不丢失
+## 使用 ARG 增加构建灵活性
+我们写一个 test.js
+```js
+console.log(process.env.aaa);
+console.log(process.env.bbb);
+```
+
+使用 ARG 声明构建参数，使用 ${xxx} 来取
+然后用 ENV 声明环境变量
+dockerfile 内换行使用 `\`
+之后构建的时候传入构建参数：
+
+我们来写一个DockerFIle
+```Dockerfile
+FROM node:18-alpine3.14
+
+ARG aaa
+ARG bbb
+
+WORKDIR /app
+
+COPY ./test.js .
+
+ENV aaa=${aaa} \
+    bbb=${bbb}
+
+CMD ["node", "/app/test.js"]
+```
