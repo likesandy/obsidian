@@ -172,3 +172,15 @@ docker run  --name arg-container arg-test
 其实还可以写成 ENTRYPOINT：
 ![[Pasted image 20231114223141.png]]
 这两个有什么区别吗？
+我们通过一个案例来证明
+先来写一个aaa.DockerFile
+```Dockerfile
+FROM node:18-alpine3.14
+
+CMD ["echo","codertao","18"]
+```
+
+构建镜像：
+```shell
+docker build -t cmd-tet -f aaa.DockerFile .
+```
