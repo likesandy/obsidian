@@ -184,3 +184,10 @@ CMD ["echo","codertao","18"]
 ```shell
 docker build -t cmd-tet -f aaa.DockerFile .
 ```
+![[Pasted image 20231114223555.png]]
+启动容器：
+```shell
+docker runc cmd-test
+```
+
+没有指定 --name 时，会生成一个随机容器名
