@@ -193,3 +193,4 @@ docker build -t cmd-tet -f aaa.DockerFile .
 ```shell
 docker run cmd-test echo "aaaa"
 ```
+可以替换成任何命令。
