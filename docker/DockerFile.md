@@ -166,3 +166,9 @@ docker run  --name arg-container arg-test
 ![[Pasted image 20231114222556.png]]
 也就是说 ARG 是构建时的参数，ENV 时运行时的变量
 灵活使用 ARG，可以增加 dockerfile 的灵活性
+#### CMD 结合 ENTRYPOINT
+前面我们指定容器跑起来之后运行什么命令，用的是 CMD：
+![[Pasted image 20231114223110.png]]
+其实还可以写成 ENTRYPOINT：
+![[Pasted image 20231114223141.png]]
+这两个有什么区别吗？
