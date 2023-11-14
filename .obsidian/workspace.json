@@ -67,7 +67,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 207.5,
+    "collapsed": true
   },
   "right": {
     "id": "c1567fdccd1b76c5",
@@ -156,12 +157,12 @@
   },
   "active": "6f2c2979341d810b",
   "lastOpenFiles": [
-    "未命名.canvas",
+    "docker/DockerFile.md",
     "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md",
+    "未命名.canvas",
     "Excalidraw",
     "2023-11-14.md",
     "nestjs/nestjs关联dockerFile.md",
-    "docker/DockerFile.md",
     "docker/public/Pasted image 20231114230725.png",
     "docker/public/Pasted image 20231114230703.png",
     "docker/public/Pasted image 20231114230600.png",
