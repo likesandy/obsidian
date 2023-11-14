@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "451ca01828c56b7d",
+        "id": "6d58e984c89a26dc",
         "type": "tabs",
         "children": [
           {
-            "id": "4559c34f10823aba",
+            "id": "f5e6413ae3dc290c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -155,21 +155,20 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "4559c34f10823aba",
+  "active": "f5e6413ae3dc290c",
   "lastOpenFiles": [
+    "docker/DockerFile.md",
+    "docker/public/Pasted image 20231114230725.png",
+    "docker/public/Pasted image 20231114230703.png",
+    "docker/public/Pasted image 20231114230600.png",
+    "docker/public/Pasted image 20231114230154.png",
     "docker/public/Pasted image 20231114225815.png",
     "docker/public/Pasted image 20231114225453.png",
     "docker/public/Pasted image 20231114225345.png",
     "docker/public/Pasted image 20231114225342.png",
     "docker/public/Pasted image 20231114224953.png",
     "docker/public/Pasted image 20231114223752.png",
-    "docker/public/Pasted image 20231114223555.png",
-    "docker/public/Pasted image 20231114223141.png",
-    "docker/public/Pasted image 20231114223110.png",
-    "docker/public/Pasted image 20231114222556.png",
-    "docker/public/Pasted image 20231114222549.png",
     "docker/介绍.md",
-    "docker/DockerFile.md",
     "nestjs/nestjs关联dockerFile.md",
     "nestjs/test.md",
     "nestjs/12312132.md",

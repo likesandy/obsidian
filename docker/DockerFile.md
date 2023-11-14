@@ -236,4 +236,41 @@ docker run cmd-test3 21
 ![[Pasted image 20231114225815.png]]
 当没传参数的时候，执行的是 ENTRYPOINT + CMD 组合的命令，而传入参数的时候，只有 CMD 部分会被覆盖
 这就起到了默认值的作用
-## 
+## COPY vs ADD
+dockerfile 里还有一对指令也比较相似，就是 ADD 和 COPY
+这俩都可以把宿主机的文件复制到容器内
+但有一点区别，就是对于 tar.gz 这种压缩文件的处理上：
+我们创建一个 aaa 目录，下面添加两个文件：
+![[Pasted image 20231114230154.png]]
+使用 tar 命令打包：
+```shell
+tar -zcvf aaa.tar.gz ./aaa
+```
+生成了一个`aaa.tar.gz`文件
+我们来写一个DockerFile
+```DockerFile
+FROM node:18-alpine3.14
+
+ADD ./aaa.tar.gz /aaa
+
+COPY ./aaa.tar.gz /bbb
+```
+build
+```shell
+docker build -t add-test .
+```
+run
+```shell
+docker run -d --name add-contaienr add-test
+```
+![[Pasted image 20231114230600.png]]
+查看容器Files详情
+![[Pasted image 20231114230703.png]]
+
+可以看到，ADD 把 tar.gz 给解压然后复制到容器内了
+而 COPY 没有解压，它把文件整个复制过去了：
+![[Pasted image 20231114230725.png]]
+也就是说，ADD、COPY 都可以用于把目录下的文件复制到容器内的目录下
+但是 ADD 还可以解压 tar.gz 文件
+
+> 一般情况下，还是用 COPY 居多
