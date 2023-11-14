@@ -4,33 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "09895652c36db037",
+        "id": "105da4eaf6db95fb",
         "type": "tabs",
         "children": [
           {
-            "id": "dabf62c6e6a7cc5b",
+            "id": "f1a1538167bf4318",
             "type": "leaf",
             "state": {
-              "type": "outline",
-              "state": {
-                "file": "docker/DockeFile.md"
-              }
-            }
-          },
-          {
-            "id": "56b7d11c2ecb0919",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docker/DockeFile.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docker/DockeFile.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docker/DockeFile.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "docker/DockeFile.md"
-              }
+              "state": {}
             }
           },
           {
@@ -166,8 +147,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "990de575a3596e03",
+  "active": "f1a1538167bf4318",
   "lastOpenFiles": [
+    "docker/什么是Docker.md",
+    "docker/public/Pasted image 20231114220754.png",
+    "docker/public/Pasted image 20231114220528.png",
+    "docker/public/Pasted image 20231114220450.png",
+    "docker/DockeFile.md",
     "docker/public/Pasted image 20231113222713.png",
     "docker/public/Pasted image 20231113223144.png",
     "docker/public/Pasted image 20231113223256.png",
@@ -175,9 +161,6 @@
     "docker/public/Pasted image 20231113223423.png",
     "docker/public/Pasted image 20231113223554.png",
     "docker/public/Pasted image 20231113223617.png",
-    "docker/public/Pasted image 20231113224541.png",
-    "docker/public/Pasted image 20231113225541.png",
-    "docker/DockeFile.md",
     "nestjs/nestjs关联dockerFile.md",
     "nestjs/test.md",
     "nestjs/12312132.md",
@@ -185,8 +168,6 @@
     "12312321312",
     "conflict-files-obsidian-git.md",
     "obsidian-notebook",
-    "nestjs/public/Pasted image 20231113235432.png",
-    "nestjs/public/Pasted image 20231113235155.png",
     "未命名.canvas",
     "nestjs/public",
     "nestjs/dockfile.md",
