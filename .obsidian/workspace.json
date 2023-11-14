@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "docker/DockerFile.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -157,6 +157,10 @@
   },
   "active": "4559c34f10823aba",
   "lastOpenFiles": [
+    "docker/public/Pasted image 20231114222556.png",
+    "docker/public/Pasted image 20231114222549.png",
+    "docker/public/Pasted image 20231114222441.png",
+    "docker/public/Pasted image 20231114222356.png",
     "docker/介绍.md",
     "docker/DockerFile.md",
     "docker/public/Pasted image 20231114220754.png",
@@ -166,9 +170,6 @@
     "docker/public/Pasted image 20231113223144.png",
     "docker/public/Pasted image 20231113223256.png",
     "docker/public/Pasted image 20231113223334.png",
-    "docker/public/Pasted image 20231113223423.png",
-    "docker/public/Pasted image 20231113223554.png",
-    "docker/public/Pasted image 20231113223617.png",
     "nestjs/nestjs关联dockerFile.md",
     "nestjs/test.md",
     "nestjs/12312132.md",

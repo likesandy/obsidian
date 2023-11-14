@@ -156,4 +156,13 @@ CMD ["node", "/app/test.js"]
 docker build --build-arg aaa=3 --build-arg bbb=4 -t arg-test .
 ```
 通过 `--build-arg xxx=yyy` 传入 ARG 参数的值
-
+![[Pasted image 20231114222356.png]]
+点击查看镜像详情，可以看到 ARG 已经被替换为具体的值了：
+![[Pasted image 20231114222441.png]]
+然后使用命令把跑起来或者使用Docker Desktop启动镜像：
+```shell
+docker run  --name arg-container arg-test
+```
+![[Pasted image 20231114222556.png]]
+也就是说 ARG 是构建时的参数，ENV 时运行时的变量
+灵活使用 ARG，可以增加 dockerfile 的灵活性
