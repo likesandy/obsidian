@@ -18,13 +18,12 @@
                 "mode": "source",
                 "source": false
               }
-            },
-            "group": "398db7ba90d82ddd"
+            }
           }
         ]
       },
       {
-        "id": "ca3a644dffe90760",
+        "id": "3615371f8d5ff526",
         "type": "tabs",
         "dimension": 19.305019305019304,
         "children": [
@@ -36,8 +35,7 @@
               "state": {
                 "file": "部署/PM2.md"
               }
-            },
-            "group": "398db7ba90d82ddd"
+            }
           }
         ]
       }
@@ -85,7 +83,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -176,7 +175,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "3690c5c82e74266e",
+  "active": "521a0b4f63cc9d27",
   "lastOpenFiles": [
     "部署/PM2.md",
     "部署/public/Pasted image 20231115224641.png",
