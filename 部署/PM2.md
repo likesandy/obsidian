@@ -70,3 +70,7 @@ pm2 start xxx --watch
 ```shell
 pm2 start xxx --no-autorestart
 ```
+### 负载均衡
+node 应用是单进程的，而为了充分利用多核 cpu，我们会使用多进程来提高性能
+node 提供的 cluster 模块就是做这个的，pm2 就是基于这个实现了负载均衡
+我们只要启动进程的时候加上 -i num 就是启动 num 个进程做负载均衡的意思
