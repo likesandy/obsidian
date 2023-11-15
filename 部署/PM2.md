@@ -41,18 +41,5 @@ pm2 logs
 ![[Pasted image 20231115215727.png]]
 比如 main-out.log 里保存了 main 进程的正常日志，而 main-error.log 里保存了它的报错日志
 
-我们再跑一个进程试试：
-编写一个`test.js`
-```js
-consoloe.log('hello pm2')
-consoloe.log('hello pm2')
-consoloe.log('hello pm2')
-```
-```shell
-pm2 start test.js
-```
-![[Pasted image 20231115221332.png]]
-现在有两个进程了，pm2 logs 可以看到这两个进程的日志：
-```shell
-pm2 start logs
-```
+我们再来跑一个`Nest`应用
+pm2可以同时跑多个进程，查看日志的时候会看到两个进程的日志
