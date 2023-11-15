@@ -11,9 +11,11 @@
             "id": "6f2c2979341d810b",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md"
+                "file": "docker/Docker原理.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -67,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 207.5,
+    "width": 200,
     "collapsed": true
   },
   "right": {
@@ -84,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md",
+                "file": "docker/Docker原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md",
+                "file": "docker/Docker原理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md"
+                "file": "docker/Docker原理.md"
               }
             }
           },
@@ -155,14 +157,17 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "6f2c2979341d810b",
+  "active": "990de575a3596e03",
   "lastOpenFiles": [
-    "docker/DockerFile.md",
+    "docker/public/Pasted image 20231115213307.png",
+    "nestjs/nestjs关联dockerFile.md",
+    "docker/Docker原理.md",
+    "Excalidraw/Drawing 2023-11-14 23.28.06.excalidraw.md",
     "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md",
+    "docker/DockerFile.md",
     "未命名.canvas",
     "Excalidraw",
     "2023-11-14.md",
-    "nestjs/nestjs关联dockerFile.md",
     "docker/public/Pasted image 20231114230725.png",
     "docker/public/Pasted image 20231114230703.png",
     "docker/public/Pasted image 20231114230600.png",
