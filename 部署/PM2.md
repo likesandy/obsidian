@@ -70,6 +70,11 @@ pm2 start xxx --watch
 ```shell
 pm2 start xxx --no-autorestart
 ```
+清空之前的日志
+```shell
+pm2 flush 进程名 
+pm2 flush 进程名|id
+```
 ## 负载均衡
 node 应用是单进程的，而为了充分利用多核 cpu，我们会使用多进程来提高性能
 node 提供的 cluster 模块就是做这个的，pm2 就是基于这个实现了负载均衡
@@ -94,3 +99,9 @@ pm2 scale main +3
 可以动态伸缩进程的数量，pm2 会把请求分配到不同进程上去
 这就是负载均衡功能
 ## 性能监控
+执行`pm2 monit`:
+```shell
+pm2 monit
+```
+可以看到不同进程的 cpu 和内存占用情况
+![[Pasted image 20231115225317.png]]

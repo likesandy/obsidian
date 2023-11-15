@@ -83,8 +83,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -175,8 +174,9 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "521a0b4f63cc9d27",
+  "active": "3690c5c82e74266e",
   "lastOpenFiles": [
+    "部署/public/Pasted image 20231115225317.png",
     "部署/PM2.md",
     "部署/public/Pasted image 20231115224641.png",
     "部署/public/Pasted image 20231115224523.png",
