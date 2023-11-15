@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docker/Docker原理.md",
+                "file": "部署/PM2.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docker/Docker原理.md",
+                "file": "部署/PM2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docker/Docker原理.md",
+                "file": "部署/PM2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docker/Docker原理.md"
+                "file": "部署/PM2.md"
               }
             }
           },
@@ -158,9 +158,11 @@
   },
   "active": "6f2c2979341d810b",
   "lastOpenFiles": [
+    "docker/Docker原理.md",
+    "部署/PM2.md",
+    "部署",
     "docker/public/Pasted image 20231115213307.png",
     "nestjs/nestjs关联dockerFile.md",
-    "docker/Docker原理.md",
     "Excalidraw/Drawing 2023-11-14 23.28.06.excalidraw.md",
     "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md",
     "docker/DockerFile.md",
@@ -176,7 +178,6 @@
     "docker/public/Pasted image 20231114225345.png",
     "docker/public/Pasted image 20231114225342.png",
     "docker/public/Pasted image 20231114224953.png",
-    "docker/public/Pasted image 20231114223752.png",
     "docker/介绍.md",
     "nestjs/test.md",
     "nestjs/12312132.md",
