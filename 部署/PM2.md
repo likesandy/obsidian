@@ -167,3 +167,11 @@ build
 ```shell
 docker build -t pm2:nest .
 ```
+把镜像跑起来
+![[Pasted image 20231115234513.png]]
+成功跑起来了
+![[Pasted image 20231115234450.png]]
+你可以在 `terminal` 使用 pm2 的命令：
+![[Pasted image 20231115234609.png]]
+而且可以在pm2.io里查看仪表板
+![[Pasted image 20231115234804.png]]

@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "部署/PM2.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -138,12 +138,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -158,6 +157,11 @@
   },
   "active": "1e371e542f38b3e5",
   "lastOpenFiles": [
+    "部署/public/Pasted image 20231115234804.png",
+    "部署/public/Pasted image 20231115234609.png",
+    "部署/public/Pasted image 20231115234527.png",
+    "部署/public/Pasted image 20231115234513.png",
+    "部署/public/Pasted image 20231115234450.png",
     "nestjs/nestjs关联dockerFile.md",
     "部署/PM2.md",
     "docker/DockerFile.md",
@@ -169,10 +173,6 @@
     "部署/public/Pasted image 20231115230935.png",
     "部署/public/Pasted image 20231115230905.png",
     "部署/public/Pasted image 20231115230819.png",
-    "部署/public/Pasted image 20231115225932.png",
-    "部署/public/Pasted image 20231115225317.png",
-    "部署/public/Pasted image 20231115224641.png",
-    "部署/public/Pasted image 20231115224523.png",
     "部署/public",
     "部署",
     "Excalidraw/Drawing 2023-11-14 23.28.06.excalidraw.md",
