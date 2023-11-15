@@ -153,6 +153,8 @@ COPY --from=build-stage /app/package.json /app/package.json
 
 WORKDIR /app
 
+RUN npm install --production
+
 RUN npm install pm2 -g
 
 ENV PM2_PUBLIC_KEY 18n7y6eco9izgva
