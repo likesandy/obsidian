@@ -4,12 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c66498a4faaff861",
+        "id": "3615371f8d5ff526",
         "type": "tabs",
-        "dimension": 80.6949806949807,
         "children": [
           {
-            "id": "3690c5c82e74266e",
+            "id": "1e371e542f38b3e5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -17,23 +16,6 @@
                 "file": "部署/PM2.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "3615371f8d5ff526",
-        "type": "tabs",
-        "dimension": 19.305019305019304,
-        "children": [
-          {
-            "id": "521a0b4f63cc9d27",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "部署/PM2.md"
               }
             }
           }
@@ -174,20 +156,19 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "3690c5c82e74266e",
+  "active": "1e371e542f38b3e5",
   "lastOpenFiles": [
+    "部署/PM2.md",
+    "部署/public/Pasted image 20231115231041.png",
+    "部署/public/Pasted image 20231115231040.png",
+    "部署/public/Pasted image 20231115231035.png",
+    "部署/public/Pasted image 20231115230935.png",
+    "部署/public/Pasted image 20231115230905.png",
+    "部署/public/Pasted image 20231115230819.png",
     "部署/public/Pasted image 20231115225932.png",
     "部署/public/Pasted image 20231115225317.png",
-    "部署/PM2.md",
     "部署/public/Pasted image 20231115224641.png",
     "部署/public/Pasted image 20231115224523.png",
-    "部署/public/Pasted image 20231115224245.png",
-    "部署/public/Pasted image 20231115222124.png",
-    "部署/public/Pasted image 20231115221332.png",
-    "部署/public/Pasted image 20231115215727.png",
-    "部署/public/Pasted image 20231115215458.png",
-    "部署/public/Pasted image 20231115215321.png",
-    "部署/public/Pasted image 20231115215202.png",
     "部署/public",
     "docker/Docker原理.md",
     "部署",

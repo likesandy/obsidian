@@ -117,4 +117,43 @@ pm2 ecosystem
 apps 部分就是配置应用的，scripts 就是应用的启动路径：
 ![[Pasted image 20231115225932.png]]
 它可以指定的配置非常多，基本就是命令行有啥选项，具体查看[文档](https://pm2.keymetrics.io/docs/usage/application-declaration/)
-## 可视化监控
+## 监测仪表板
+此外我们还可以访问[pm2](https://pm2.io/)的官网通过仪表板来监控应用
+登录注册一个账号，之后把应用和网站关联起来：
+![[Pasted image 20231115230819.png]]
+![[Pasted image 20231115230905.png]]
+可以在线监控你的应用：
+![[Pasted image 20231115230935.png]]
+## docker部署pm2
+查看文档，配置[[DockerFile]]
+![[Pasted image 20231115231041.png]]
+```DockerFile
+# build stage
+FROM node:18 as build-stage
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm config set registry https://registry.npmmirror.com/
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+# production stage
+FROM node:18 as production-stage
+
+COPY --from=build-stage /app/dist /app
+COPY --from=build-stage /app/package.json /app/package.json
+
+WORKDIR /app
+
+RUN npm install --production
+
+EXPOSE 3000
+
+CMD ["node", "/app/main.js"]
+```
