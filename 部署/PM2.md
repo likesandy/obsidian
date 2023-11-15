@@ -42,4 +42,8 @@ pm2 logs
 比如 main-out.log 里保存了 main 进程的正常日志，而 main-error.log 里保存了它的报错日志
 
 我们再来跑一个`Nest`应用
+![[Pasted image 20231115222124.png]]
 pm2可以同时跑多个进程，查看日志的时候会看到两个进程的日志
+```shell
+pm2 logs
+```
