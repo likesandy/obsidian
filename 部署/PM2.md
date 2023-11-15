@@ -144,15 +144,19 @@ COPY . .
 RUN npm run build
 
 # production stage
+
 FROM node:18-alpine3.14 as production-stage
 
 COPY --from=build-stage /app/dist /app
+
 COPY --from=build-stage /app/package.json /app/package.json
 
 WORKDIR /app
 
 RUN npm install pm2 -g
+
 ENV PM2_PUBLIC_KEY 18n7y6eco9izgva
+
 ENV PM2_SECRET_KEY hzdckgby39iroui
 
 CMD ["pm2-runtime", "app.js"]

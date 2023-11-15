@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docker/DockerFile.md",
+                "file": "部署/PM2.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docker/DockerFile.md",
+                "file": "部署/PM2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docker/DockerFile.md",
+                "file": "部署/PM2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docker/DockerFile.md"
+                "file": "部署/PM2.md"
               }
             }
           },
@@ -158,9 +158,11 @@
   },
   "active": "1e371e542f38b3e5",
   "lastOpenFiles": [
-    "部署/PM2.md",
+    "nestjs/nestjs关联dockerFile.md",
     "docker/DockerFile.md",
+    "docker/Docker原理.md",
     "docker/介绍.md",
+    "部署/PM2.md",
     "部署/public/Pasted image 20231115231041.png",
     "部署/public/Pasted image 20231115231040.png",
     "部署/public/Pasted image 20231115231035.png",
@@ -172,9 +174,7 @@
     "部署/public/Pasted image 20231115224641.png",
     "部署/public/Pasted image 20231115224523.png",
     "部署/public",
-    "docker/Docker原理.md",
     "部署",
-    "nestjs/nestjs关联dockerFile.md",
     "Excalidraw/Drawing 2023-11-14 23.28.06.excalidraw.md",
     "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md",
     "未命名.canvas",
