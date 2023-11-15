@@ -159,7 +159,7 @@ ENV PM2_PUBLIC_KEY 18n7y6eco9izgva
 
 ENV PM2_SECRET_KEY hzdckgby39iroui
 
-CMD ["pm2-runtime", "main.js"]
+CMD ["pm2-runtime", "/app/main.js"]
 ```
 build
 ```shell
