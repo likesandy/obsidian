@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "部署/PM2.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -158,6 +158,8 @@
   },
   "active": "1e371e542f38b3e5",
   "lastOpenFiles": [
+    "docker/DockerFile.md",
+    "docker/介绍.md",
     "部署/PM2.md",
     "部署/public/Pasted image 20231115231041.png",
     "部署/public/Pasted image 20231115231040.png",
@@ -175,11 +177,9 @@
     "nestjs/nestjs关联dockerFile.md",
     "Excalidraw/Drawing 2023-11-14 23.28.06.excalidraw.md",
     "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md",
-    "docker/DockerFile.md",
     "未命名.canvas",
     "Excalidraw",
     "2023-11-14.md",
-    "docker/介绍.md",
     "nestjs/test.md",
     "nestjs/12312132.md",
     "nestjs/12312312.md",

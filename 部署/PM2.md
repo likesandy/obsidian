@@ -129,7 +129,7 @@ apps 部分就是配置应用的，scripts 就是应用的启动路径：
 ![[Pasted image 20231115231041.png]]
 ```DockerFile
 # build stage
-FROM node:18 as build-stage
+FROM node:18-alpine3.14 as build-stage
 
 WORKDIR /app
 
@@ -144,16 +144,20 @@ COPY . .
 RUN npm run build
 
 # production stage
-FROM node:18 as production-stage
+FROM node:18-alpine3.14 as production-stage
 
 COPY --from=build-stage /app/dist /app
 COPY --from=build-stage /app/package.json /app/package.json
 
 WORKDIR /app
 
-RUN npm install --production
+RUN npm install pm2 -g
+ENV PM2_PUBLIC_KEY 18n7y6eco9izgva
+ENV PM2_SECRET_KEY hzdckgby39iroui
 
-EXPOSE 3000
-
-CMD ["node", "/app/main.js"]
+CMD ["pm2-runtime", "app.js"]
+```
+build
+```shell
+docker build -t pm2:nest
 ```
