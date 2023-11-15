@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "部署/PM2.md",
-                "mode": "preview",
+                "file": "docker/DockerFile.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "部署/PM2.md",
+                "file": "docker/DockerFile.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "部署/PM2.md",
+                "file": "docker/DockerFile.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "部署/PM2.md"
+                "file": "docker/DockerFile.md"
               }
             }
           },
@@ -158,9 +158,9 @@
   },
   "active": "1e371e542f38b3e5",
   "lastOpenFiles": [
+    "部署/PM2.md",
     "docker/DockerFile.md",
     "docker/介绍.md",
-    "部署/PM2.md",
     "部署/public/Pasted image 20231115231041.png",
     "部署/public/Pasted image 20231115231040.png",
     "部署/public/Pasted image 20231115231035.png",

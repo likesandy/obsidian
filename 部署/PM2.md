@@ -159,5 +159,5 @@ CMD ["pm2-runtime", "app.js"]
 ```
 build
 ```shell
-docker build -t pm2:nest
+docker build -t pm2:nest .
 ```
