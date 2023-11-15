@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "c1567fdccd1b76c5",
@@ -157,7 +156,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "990de575a3596e03",
+  "active": "6f2c2979341d810b",
   "lastOpenFiles": [
     "docker/public/Pasted image 20231115213307.png",
     "nestjs/nestjs关联dockerFile.md",
