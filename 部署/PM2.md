@@ -52,3 +52,21 @@ pm2 logs 进程id
 ```
 ## 进程管理
 进程管理的话就是可以手动启动、重启、停止某个进程，而且崩溃了会自动重启，也可以定时自动重启
+只需要 pm2 start 的时候带上几个选项就好了：
+
+超过 200M 内存自动重启：
+```shell
+pm2 start xxx --max-memory-restart 200M
+```
+从 2s 开始每 3s 重启一次：
+```shell
+pm2 start xxx --cron-restart "2/3 * * * * *"
+```
+当文件内容改变自动重启：
+```shell
+pm2 start xxx --watch
+```
+不自动重启：
+```shell
+pm2 start xxx --no-autorestart
+```
