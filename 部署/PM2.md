@@ -116,4 +116,5 @@ pm2 ecosystem
 ```
 apps 部分就是配置应用的，scripts 就是应用的启动路径：
 ![[Pasted image 20231115225932.png]]
-它可以指定的配置非常多，基本就是命令行有啥选项，这里就有啥属性：
+它可以指定的配置非常多，基本就是命令行有啥选项，具体查看[文档](https://pm2.keymetrics.io/docs/usage/application-declaration/)
+## 可视化监控
