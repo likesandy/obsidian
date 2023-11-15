@@ -4,11 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "f84a4485276b3f13",
+        "id": "c66498a4faaff861",
         "type": "tabs",
+        "dimension": 80.6949806949807,
         "children": [
           {
-            "id": "6f2c2979341d810b",
+            "id": "3690c5c82e74266e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -17,7 +18,26 @@
                 "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "398db7ba90d82ddd"
+          }
+        ]
+      },
+      {
+        "id": "ca3a644dffe90760",
+        "type": "tabs",
+        "dimension": 19.305019305019304,
+        "children": [
+          {
+            "id": "521a0b4f63cc9d27",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "部署/PM2.md"
+              }
+            },
+            "group": "398db7ba90d82ddd"
           }
         ]
       }
@@ -156,8 +176,12 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "6f2c2979341d810b",
+  "active": "3690c5c82e74266e",
   "lastOpenFiles": [
+    "部署/PM2.md",
+    "部署/public/Pasted image 20231115224641.png",
+    "部署/public/Pasted image 20231115224523.png",
+    "部署/public/Pasted image 20231115224245.png",
     "部署/public/Pasted image 20231115222124.png",
     "部署/public/Pasted image 20231115221332.png",
     "部署/public/Pasted image 20231115215727.png",
@@ -166,7 +190,6 @@
     "部署/public/Pasted image 20231115215202.png",
     "部署/public",
     "docker/Docker原理.md",
-    "部署/PM2.md",
     "部署",
     "docker/public/Pasted image 20231115213307.png",
     "nestjs/nestjs关联dockerFile.md",
@@ -176,10 +199,6 @@
     "未命名.canvas",
     "Excalidraw",
     "2023-11-14.md",
-    "docker/public/Pasted image 20231114230725.png",
-    "docker/public/Pasted image 20231114230703.png",
-    "docker/public/Pasted image 20231114230600.png",
-    "docker/public/Pasted image 20231114230154.png",
     "docker/介绍.md",
     "nestjs/test.md",
     "nestjs/12312132.md",

@@ -74,3 +74,24 @@ pm2 start xxx --no-autorestart
 node 应用是单进程的，而为了充分利用多核 cpu，我们会使用多进程来提高性能
 node 提供的 cluster 模块就是做这个的，pm2 就是基于这个实现了负载均衡
 我们只要启动进程的时候加上 -i num 就是启动 num 个进程做负载均衡的意思
+```shell
+pm2 start xx -i max
+pm2 start xx -i 0
+```
+![[Pasted image 20231115224245.png]]
+我这里跑起了12个进程
+跑起来之后，还可以动态调整进程数，通过`pm2 scale`：
+```shell
+pm2 scale 进程name 数量
+```
+![[Pasted image 20231115224523.png]]
+可以看到 pm2 删除了 8 个，留下了 3 个
+```shell
+pm2 scale main +3
+```
+我又加了三个，现在变成了六个
+![[Pasted image 20231115224641.png]]
+可以动态伸缩进程的数量，pm2 会把请求分配到不同进程上去
+这就是负载均衡功能
+## 性能监控
+
