@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数据结构/哈希表.md",
+                "file": "算法/排序/02_选择排序.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数据结构/哈希表.md",
+                "file": "算法/排序/02_选择排序.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数据结构/哈希表.md",
+                "file": "算法/排序/02_选择排序.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数据结构/哈希表.md"
+                "file": "算法/排序/02_选择排序.md"
               }
             }
           },
@@ -157,8 +157,13 @@
   },
   "active": "577f7b8166fba4ea",
   "lastOpenFiles": [
-    "未命名.md",
+    "算法/排序/01_排序算法.md",
+    "算法/排序/02_选择排序.md",
     "数据结构/哈希表.md",
+    "算法/排序.md",
+    "算法/排序",
+    "算法",
+    "未命名.md",
     "部署/PM2.md",
     "数据结构",
     "部署/public/Pasted image 20231115234804.png",
@@ -190,8 +195,6 @@
     "obsidian-notebook",
     "nestjs/public",
     "nestjs/dockfile.md",
-    "nestjs",
-    "docker/public",
-    "public"
+    "nestjs"
   ]
 }
