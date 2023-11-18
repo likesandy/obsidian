@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "算法/排序/01_排序算法.md",
+                "file": "算法/排序/02_选择排序.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/排序/01_排序算法.md",
+                "file": "算法/排序/02_选择排序.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "算法/排序/01_排序算法.md",
+                "file": "算法/排序/02_选择排序.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "算法/排序/01_排序算法.md"
+                "file": "算法/排序/02_选择排序.md"
               }
             }
           },
@@ -158,9 +158,9 @@
   "active": "577f7b8166fba4ea",
   "lastOpenFiles": [
     "算法/排序/03_冒泡排序.md",
+    "算法/排序/01_排序算法.md",
     "算法/排序/02_选择排序.md",
     "算法/排序/public/Pasted image 20231118121950.png",
-    "算法/排序/01_排序算法.md",
     "算法/排序/public/Pasted image 20231117231315.png",
     "算法/排序/public",
     "数据结构/哈希表.md",
