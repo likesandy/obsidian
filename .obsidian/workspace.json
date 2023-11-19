@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ce9766339b68fb0a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "算法/排序/06_归并排序.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/排序/05_快速排序.md",
+                "file": "算法/排序/06_归并排序.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "算法/排序/05_快速排序.md",
+                "file": "算法/排序/06_归并排序.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "算法/排序/05_快速排序.md"
+                "file": "算法/排序/06_归并排序.md"
               }
             }
           },
@@ -156,10 +169,11 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "6ffcae0478caf2e6",
+  "active": "ce9766339b68fb0a",
   "lastOpenFiles": [
-    "算法/排序/04_插入排序.md",
     "算法/排序/05_快速排序.md",
+    "算法/排序/06_归并排序.md",
+    "算法/排序/04_插入排序.md",
     "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md",
     "算法/排序/public/Pasted image 20231118170357.png",
     "算法/排序/02_选择排序.md",
