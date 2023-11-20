@@ -37,26 +37,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "算法/排序/07_堆排序.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c9078841805ca9d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "算法/排序/08_希尔排序.md",
+                "file": "算法/搜索.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -122,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/排序/08_希尔排序.md",
+                "file": "算法/搜索.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "算法/排序/08_希尔排序.md",
+                "file": "算法/搜索.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "算法/排序/08_希尔排序.md"
+                "file": "算法/搜索.md"
               }
             }
           },
@@ -179,7 +167,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 227.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,18 +182,26 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "c9078841805ca9d2",
+  "active": "78afdec22aa5bae5",
   "lastOpenFiles": [
     "算法/排序/07_堆排序.md",
-    "算法/排序/08_希尔排序.md",
+    "未命名 1.canvas",
+    "未命名.canvas",
+    "算法/搜索.md",
+    "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md",
     "算法/排序/06_快速排序.md",
+    "Excalidraw/Drawing 2023-11-20 22.02.39.excalidraw.md",
+    "算法/public/Pasted image 20231120211837.png",
+    "算法/public/Pasted image 20231120211558.png",
+    "算法/排序/01_排序算法.md",
+    "算法/排序/02_冒泡排序.md",
+    "算法/public",
+    "数据结构/哈希表.md",
+    "算法/排序/08_希尔排序.md",
     "算法/排序/05_归并排序.md",
     "算法/排序/04_插入排序.md",
     "算法/排序/03_选择排序.md",
-    "算法/排序/02_冒泡排序.md",
-    "算法/排序/01_排序算法.md",
     "算法/排序/public/Pasted image 20231119203316.png",
-    "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md",
     "算法/排序/public/Pasted image 20231118170357.png",
     "算法/排序/public/Pasted image 20231118152450.png",
     "算法/排序/public/Pasted image 20231118152449.png",
@@ -220,17 +217,11 @@
     "Notion/面经分享/21-前端面试小结.md",
     "Notion/面经分享/面经分享.md",
     "Notion/邂逅Jenkins/public/Untitled.png",
-    "Notion/邂逅Jenkins/public/Untitled 9.png",
-    "Notion/邂逅Jenkins/public/Untitled 8.png",
     "Notion/邂逅Jenkins/邂逅Jenkins.md",
     "Notion/自动化部署-未公开/自动化部署-未公开.md",
     "Notion/编程规范-未公开/编程规范-未公开.md",
     "Notion/算法/Sorting/Sorting.md",
     "Notion/算法/Dynamic Planning/Dynamic Planning.md",
-    "Notion/算法/算法.md",
-    "Notion/数据结构-未公开/前言/前言.md",
-    "Notion/数据结构-未公开/Tree/Tree.md",
-    "Notion/数据结构-未公开/Stack/Stack.md",
     "Notion/面经分享/public",
     "Notion/邂逅Jenkins/public",
     "Notion/自动化部署-未公开/public",
@@ -239,8 +230,6 @@
     "Notion/算法/public",
     "Notion/算法/Dynamic Planning/public",
     "Notion/数据结构-未公开/前言/public",
-    "Notion/数据结构-未公开/Tree/public",
-    "Notion/数据结构-未公开/Stack/public",
-    "未命名.canvas"
+    "Notion/数据结构-未公开/Tree/public"
   ]
 }
