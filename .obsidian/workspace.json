@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "nestjs/双token.md",
+                "file": "docker/Docker重启策略.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "nestjs/双token.md",
+                "file": "docker/Docker重启策略.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "nestjs/双token.md",
+                "file": "docker/Docker重启策略.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "nestjs/双token.md"
+                "file": "docker/Docker重启策略.md"
               }
             }
           },
@@ -157,10 +157,14 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "1dba0f7f1b0ab3b9",
+  "active": "990de575a3596e03",
   "lastOpenFiles": [
+    "nginx",
+    "docker/Docker容器通信.md",
+    "docker/Docker重启策略.md",
+    "docker/Docker Compose.md",
+    "nestjs/刷新token和单点登录.md",
     "nestjs/权限.md",
-    "nestjs/双token.md",
     "网络/登录状态保存.md",
     "网络/public/Pasted image 20231122231342.png",
     "网络/public/Pasted image 20231122231341.png",
@@ -200,10 +204,6 @@
     "docker/docker.md",
     "docker/介绍.md",
     "docker/Docker原理.md",
-    "Notion/面试自我介绍.md",
-    "Notion/面经分享/23-前端面试小结.md",
-    "Notion/面经分享/22-前端面试小结.md",
-    "Notion/面经分享/21-前端面试小结.md",
     "Notion/面经分享/public",
     "Notion/邂逅Jenkins/public",
     "Notion/自动化部署-未公开/public"
