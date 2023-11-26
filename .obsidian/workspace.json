@@ -159,8 +159,13 @@
   },
   "active": "d7dcb3b470c80808",
   "lastOpenFiles": [
-    "nginx/nginx实现灰度系统.md",
+    "nodejs/Node实现邮箱验证码登录.md",
     "nodejs/Node实现收发邮件.md",
+    "nodejs/nestjs/redis推荐.md",
+    "数据库/Redis/redis.md",
+    "nodejs/public/Pasted image 20231126190253.png",
+    "nodejs/public",
+    "nginx/nginx实现灰度系统.md",
     "nodejs",
     "nginx/public/Pasted image 20231126164830.png",
     "未命名",
@@ -185,13 +190,10 @@
     "网络/登录状态保存.md",
     "网络/public/Pasted image 20231122231342.png",
     "网络/public/Pasted image 20231122231341.png",
-    "网络/public/Pasted image 20231122231339.png",
     "网络/public",
-    "数据库/Redis/redis.md",
     "网络",
     "算法/排序/06_快速排序.md",
     "nodejs/nestjs/集成nestjs.md",
-    "数据库/Redis/public",
     "数据库/ORM/TypeORM.md",
     "数据库/ORM/ORM.md",
     "未命名 1.canvas",
@@ -204,8 +206,6 @@
     "数据结构/哈希表.md",
     "算法/排序/08_希尔排序.md",
     "算法/排序/05_归并排序.md",
-    "算法/排序/04_插入排序.md",
-    "算法/排序/03_选择排序.md",
-    "docker/docker.md"
+    "算法/排序/04_插入排序.md"
   ]
 }
