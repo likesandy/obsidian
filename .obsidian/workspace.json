@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "nginx/nginx实现灰度系统.md",
+                "file": "nodejs/Node实现收发邮件.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "nginx/nginx实现灰度系统.md",
+                "file": "nodejs/Node实现收发邮件.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "nginx/nginx实现灰度系统.md",
+                "file": "nodejs/Node实现收发邮件.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "nginx/nginx实现灰度系统.md"
+                "file": "nodejs/Node实现收发邮件.md"
               }
             }
           },
@@ -159,10 +159,13 @@
   },
   "active": "d7dcb3b470c80808",
   "lastOpenFiles": [
+    "nginx/nginx实现灰度系统.md",
+    "nodejs/Node实现收发邮件.md",
+    "nodejs",
+    "nginx/public/Pasted image 20231126164830.png",
+    "未命名",
     "nginx/public/Pasted image 20231125233250.png",
     "nginx/nginx.md",
-    "nginx/nginx实现灰度系统.md",
-    "未命名",
     "nginx/public/Pasted image 20231125225113.png",
     "nginx/public/Pasted image 20231125224815.png",
     "nginx/public/Pasted image 20231125224518.png",
@@ -177,22 +180,19 @@
     "nginx",
     "docker/Docker容器通信.md",
     "docker/Docker Compose.md",
-    "nestjs/刷新token和单点登录.md",
-    "nestjs/权限.md",
+    "nodejs/nestjs/刷新token和单点登录.md",
+    "nodejs/nestjs/权限.md",
     "网络/登录状态保存.md",
     "网络/public/Pasted image 20231122231342.png",
     "网络/public/Pasted image 20231122231341.png",
     "网络/public/Pasted image 20231122231339.png",
-    "网络/public/Pasted image 20231122225907.png",
-    "网络/public/Pasted image 20231122225903.png",
     "网络/public",
     "数据库/Redis/redis.md",
     "网络",
     "算法/排序/06_快速排序.md",
-    "nestjs/集成nestjs.md",
+    "nodejs/nestjs/集成nestjs.md",
     "数据库/Redis/public",
     "数据库/ORM/TypeORM.md",
-    "数据库/Redis",
     "数据库/ORM/ORM.md",
     "未命名 1.canvas",
     "未命名.canvas",
