@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "nodejs/Node实现收发邮件.md",
+                "file": "nodejs/Node实现邮箱验证码登录.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "nodejs/Node实现收发邮件.md",
+                "file": "nodejs/Node实现邮箱验证码登录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "nodejs/Node实现收发邮件.md",
+                "file": "nodejs/Node实现邮箱验证码登录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "nodejs/Node实现收发邮件.md"
+                "file": "nodejs/Node实现邮箱验证码登录.md"
               }
             }
           },
@@ -159,8 +159,8 @@
   },
   "active": "d7dcb3b470c80808",
   "lastOpenFiles": [
-    "nodejs/Node实现邮箱验证码登录.md",
     "nodejs/Node实现收发邮件.md",
+    "nodejs/Node实现邮箱验证码登录.md",
     "nodejs/nestjs/redis推荐.md",
     "数据库/Redis/redis.md",
     "nodejs/public/Pasted image 20231126190253.png",
