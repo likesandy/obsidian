@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "4774daa22199e789",
+        "id": "384818088c288a7f",
         "type": "tabs",
         "children": [
           {
-            "id": "899f7684c0258387",
+            "id": "c4bfb11bfae7fca0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "数据库/Redis/定时任务+redis实现阅读量计数.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数据库/Redis/定时任务+redis实现阅读量计数.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数据库/Redis/定时任务+redis实现阅读量计数.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "数据库/Redis/定时任务+redis实现阅读量计数.md"
-              }
+              "state": {}
             }
           },
           {
@@ -157,17 +149,21 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "899f7684c0258387",
+  "active": "c4bfb11bfae7fca0",
   "lastOpenFiles": [
-    "数据库/Redis/redis.md",
-    "数据库/Redis/定时任务+redis实现阅读量计数.md",
-    "nodejs/nestjs/未命名.md",
-    "未命名",
     "nodejs/Node实现收发邮件.md",
+    "nodejs/nestjs/sharp实现图片压缩.md",
+    "nodejs/nestjs/public/test.gif",
+    "nodejs/nestjs/SSE.md",
+    "nodejs/nestjs/public/Pasted image 20231130221914.png",
+    "nodejs/nestjs/public/Pasted image 20231130221635.png",
+    "数据库/Redis/定时任务+redis实现阅读量计数.md",
+    "nodejs/nestjs/redis推荐.md",
+    "数据库/Redis/redis.md",
+    "未命名",
     "nodejs/nestjs/Nestjs实现邮箱验证码登录.md",
     "leetcode/链表",
     "leetcode",
-    "nodejs/nestjs/redis推荐.md",
     "nodejs/public/Pasted image 20231126190253.png",
     "nodejs/public",
     "nginx/nginx实现灰度系统.md",
@@ -179,7 +175,6 @@
     "nginx/public/Pasted image 20231125224815.png",
     "nginx/public/Pasted image 20231125224518.png",
     "nginx/public/Pasted image 20231125223447.png",
-    "nginx/public/Pasted image 20231125223248.png",
     "nginx/public",
     "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md",
     "Excalidraw/ZhaoCaiKaiShu-2.ttf",
@@ -192,8 +187,6 @@
     "nodejs/nestjs/刷新token和单点登录.md",
     "nodejs/nestjs/权限.md",
     "网络/登录状态保存.md",
-    "网络/public/Pasted image 20231122231342.png",
-    "网络/public/Pasted image 20231122231341.png",
     "算法/排序/06_快速排序.md",
     "nodejs/nestjs/集成nestjs.md",
     "数据库/ORM/TypeORM.md",
@@ -204,8 +197,6 @@
     "算法/排序/07_堆排序.md",
     "Excalidraw/Drawing 2023-11-20 22.02.39.excalidraw.md",
     "算法/排序/01_排序算法.md",
-    "算法/排序/02_冒泡排序.md",
-    "数据结构/哈希表.md",
-    "算法/排序/08_希尔排序.md"
+    "算法/排序/02_冒泡排序.md"
   ]
 }
