@@ -1,7 +1,7 @@
 [
   "obsidian-git",
-  "obsidian-excalidraw-plugin",
   "obsidian-image-toolkit",
   "obsidian-linter",
-  "obsidian-importer"
+  "obsidian-importer",
+  "obsidian-excalidraw-plugin"
 ]

@@ -4,15 +4,29 @@
     "type": "split",
     "children": [
       {
-        "id": "384818088c288a7f",
+        "id": "6a7fafed72f7b29c",
         "type": "tabs",
         "children": [
           {
-            "id": "c4bfb11bfae7fca0",
+            "id": "dee892712fb62c14",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "react/组件.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "eb3812dfcfeba7d5",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2023-12-02 18.25.48.excalidraw.md"
+              }
             }
           }
         ]
@@ -65,7 +79,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "c1567fdccd1b76c5",
@@ -81,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "react/组件.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "react/组件.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +135,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "react/组件.md"
+              }
             }
           },
           {
@@ -145,12 +164,31 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "obsidian-importer:Open Importer": false
+      "obsidian-importer:Open Importer": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "c4bfb11bfae7fca0",
+  "active": "dee892712fb62c14",
   "lastOpenFiles": [
+    "react/JSX是什么.md",
+    "react/组件.md",
+    "react/public/Pasted image 20231202183300.png",
+    "Excalidraw/Drawing 2023-12-02 18.25.48.excalidraw.md",
+    "Excalidraw/fonts/字语青梅硬笔.ttf",
+    "Excalidraw/fonts/HanyiSentyRubber.ttf",
+    "Excalidraw/fonts",
+    "Excalidraw/新建文件夹",
+    "Excalidraw",
+    "Excalidraw/Drawing 2023-12-02 18.08.12.excalidraw.md",
+    "react/public/Pasted image 20231202180453.png",
+    "react/public/Pasted image 20231202180426.png",
+    "react/public/Pasted image 20231202180342.png",
+    "react/public/Pasted image 20231202180228.png",
+    "react/public/Pasted image 20231202174113.png",
+    "react/public",
+    "nodejs/nestjs/REPL.md",
+    "react/未命名",
+    "react",
     "nodejs/Node实现收发邮件.md",
     "nodejs/nestjs/sharp实现图片压缩.md",
     "nodejs/nestjs/public/test.gif",
@@ -160,28 +198,14 @@
     "数据库/Redis/定时任务+redis实现阅读量计数.md",
     "nodejs/nestjs/redis推荐.md",
     "数据库/Redis/redis.md",
-    "未命名",
     "nodejs/nestjs/Nestjs实现邮箱验证码登录.md",
     "leetcode/链表",
     "leetcode",
     "nodejs/public/Pasted image 20231126190253.png",
-    "nodejs/public",
     "nginx/nginx实现灰度系统.md",
-    "nodejs",
-    "nginx/public/Pasted image 20231126164830.png",
-    "nginx/public/Pasted image 20231125233250.png",
     "nginx/nginx.md",
-    "nginx/public/Pasted image 20231125225113.png",
-    "nginx/public/Pasted image 20231125224815.png",
-    "nginx/public/Pasted image 20231125224518.png",
-    "nginx/public/Pasted image 20231125223447.png",
-    "nginx/public",
     "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md",
-    "Excalidraw/ZhaoCaiKaiShu-2.ttf",
-    "Excalidraw/SanJiChunLinXingKai-2.ttf",
-    "Excalidraw/HongLeiXingShuJianTi-2.otf",
     "docker/Docker重启策略.md",
-    "nginx",
     "docker/Docker容器通信.md",
     "docker/Docker Compose.md",
     "nodejs/nestjs/刷新token和单点登录.md",
@@ -193,10 +217,6 @@
     "数据库/ORM/ORM.md",
     "未命名 1.canvas",
     "未命名.canvas",
-    "算法/搜索.md",
-    "算法/排序/07_堆排序.md",
-    "Excalidraw/Drawing 2023-11-20 22.02.39.excalidraw.md",
-    "算法/排序/01_排序算法.md",
-    "算法/排序/02_冒泡排序.md"
+    "算法/搜索.md"
   ]
 }
