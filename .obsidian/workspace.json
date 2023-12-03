@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "6a7fafed72f7b29c",
+        "id": "92ac5b654f2fbb8d",
         "type": "tabs",
         "children": [
           {
-            "id": "dee892712fb62c14",
+            "id": "f8dacb364770501d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "react/组件.md",
+                "file": "react/03_state.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "eb3812dfcfeba7d5",
+            "id": "5ea51019f730fb06",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/Drawing 2023-12-02 18.25.48.excalidraw.md"
+                "file": "Excalidraw/随笔.md"
               }
             }
           }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "react/组件.md",
+                "file": "react/03_state.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "react/组件.md",
+                "file": "react/03_state.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "react/组件.md"
+                "file": "react/03_state.md"
               }
             }
           },
@@ -153,8 +153,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227.5,
-    "collapsed": true
+    "width": 227.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -164,44 +163,47 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-importer:Open Importer": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "dee892712fb62c14",
+  "active": "f8dacb364770501d",
   "lastOpenFiles": [
-    "react/JSX是什么.md",
-    "react/组件.md",
-    "react/public/Pasted image 20231202183300.png",
-    "Excalidraw/Drawing 2023-12-02 18.25.48.excalidraw.md",
+    "react/public/Pasted image 20231203230951.png",
+    "react/public/Pasted image 20231203230740.png",
+    "Excalidraw/随笔.md",
+    "react/03_state.md",
+    "react/02_组件.md",
+    "react/public/Pasted image 20231203205556.png",
+    "react/public/Pasted image 20231203205006.png",
+    "react/public/Pasted image 20231203204557.png",
+    "react/public/Pasted image 20231203204556.png",
+    "react/public/Pasted image 20231203200122.png",
+    "react/public/Pasted image 20231203200144.png",
+    "react/public/Pasted image 20231203200248.png",
+    "react/public/Pasted image 20231203200323.png",
+    "react/public/Pasted image 20231203200555.png",
+    "react/Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a.md",
+    "Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a/Untitled 1.png.md",
+    "Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a",
+    "Notion",
+    "react/01_JSX是什么.md",
     "Excalidraw/fonts/字语青梅硬笔.ttf",
     "Excalidraw/fonts/HanyiSentyRubber.ttf",
     "Excalidraw/fonts",
     "Excalidraw/新建文件夹",
     "Excalidraw",
     "Excalidraw/Drawing 2023-12-02 18.08.12.excalidraw.md",
-    "react/public/Pasted image 20231202180453.png",
-    "react/public/Pasted image 20231202180426.png",
-    "react/public/Pasted image 20231202180342.png",
-    "react/public/Pasted image 20231202180228.png",
-    "react/public/Pasted image 20231202174113.png",
     "react/public",
     "nodejs/nestjs/REPL.md",
     "react/未命名",
     "react",
     "nodejs/Node实现收发邮件.md",
     "nodejs/nestjs/sharp实现图片压缩.md",
-    "nodejs/nestjs/public/test.gif",
     "nodejs/nestjs/SSE.md",
-    "nodejs/nestjs/public/Pasted image 20231130221914.png",
-    "nodejs/nestjs/public/Pasted image 20231130221635.png",
     "数据库/Redis/定时任务+redis实现阅读量计数.md",
     "nodejs/nestjs/redis推荐.md",
     "数据库/Redis/redis.md",
     "nodejs/nestjs/Nestjs实现邮箱验证码登录.md",
-    "leetcode/链表",
-    "leetcode",
-    "nodejs/public/Pasted image 20231126190253.png",
     "nginx/nginx实现灰度系统.md",
     "nginx/nginx.md",
     "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md",
@@ -212,11 +214,7 @@
     "nodejs/nestjs/权限.md",
     "网络/登录状态保存.md",
     "算法/排序/06_快速排序.md",
-    "nodejs/nestjs/集成nestjs.md",
-    "数据库/ORM/TypeORM.md",
-    "数据库/ORM/ORM.md",
     "未命名 1.canvas",
-    "未命名.canvas",
-    "算法/搜索.md"
+    "未命名.canvas"
   ]
 }
