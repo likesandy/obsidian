@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "react/03_state.md",
+                "file": "react/public/05_生命周期.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "react/03_state.md",
+                "file": "react/public/05_生命周期.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "react/03_state.md",
+                "file": "react/public/05_生命周期.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "react/03_state.md"
+                "file": "react/public/05_生命周期.md"
               }
             }
           },
@@ -153,7 +153,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227.5
+    "width": 274.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -168,10 +169,16 @@
   },
   "active": "f8dacb364770501d",
   "lastOpenFiles": [
+    "react/public/public/Pasted image 20231205001005.png",
+    "react/public/public/Pasted image 20231204233151.png",
+    "Excalidraw/随笔.md",
+    "react/public/05_生命周期.md",
+    "react/public/public/Pasted image 20231204230226.png",
+    "react/public/public",
+    "react/01_JSX是什么.md",
+    "react/03_state.md",
     "react/public/Pasted image 20231203230951.png",
     "react/public/Pasted image 20231203230740.png",
-    "Excalidraw/随笔.md",
-    "react/03_state.md",
     "react/02_组件.md",
     "react/public/Pasted image 20231203205556.png",
     "react/public/Pasted image 20231203205006.png",
@@ -179,14 +186,10 @@
     "react/public/Pasted image 20231203204556.png",
     "react/public/Pasted image 20231203200122.png",
     "react/public/Pasted image 20231203200144.png",
-    "react/public/Pasted image 20231203200248.png",
-    "react/public/Pasted image 20231203200323.png",
-    "react/public/Pasted image 20231203200555.png",
     "react/Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a.md",
     "Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a/Untitled 1.png.md",
     "Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a",
     "Notion",
-    "react/01_JSX是什么.md",
     "Excalidraw/fonts/字语青梅硬笔.ttf",
     "Excalidraw/fonts/HanyiSentyRubber.ttf",
     "Excalidraw/fonts",
@@ -196,7 +199,6 @@
     "react/public",
     "nodejs/nestjs/REPL.md",
     "react/未命名",
-    "react",
     "nodejs/Node实现收发邮件.md",
     "nodejs/nestjs/sharp实现图片压缩.md",
     "nodejs/nestjs/SSE.md",
@@ -213,7 +215,6 @@
     "nodejs/nestjs/刷新token和单点登录.md",
     "nodejs/nestjs/权限.md",
     "网络/登录状态保存.md",
-    "算法/排序/06_快速排序.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
