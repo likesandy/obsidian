@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "react/public/05_生命周期.md",
+                "file": "react/04_props.md",
                 "mode": "source",
                 "source": false
               }
@@ -79,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "c1567fdccd1b76c5",
@@ -96,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "react/public/05_生命周期.md",
+                "file": "react/04_props.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "react/public/05_生命周期.md",
+                "file": "react/04_props.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "react/public/05_生命周期.md"
+                "file": "react/04_props.md"
               }
             }
           },
@@ -169,23 +168,23 @@
   },
   "active": "f8dacb364770501d",
   "lastOpenFiles": [
-    "react/public/public/Pasted image 20231205001005.png",
-    "react/public/public/Pasted image 20231204233151.png",
-    "Excalidraw/随笔.md",
-    "react/public/05_生命周期.md",
-    "react/public/public/Pasted image 20231204230226.png",
-    "react/public/public",
-    "react/01_JSX是什么.md",
     "react/03_state.md",
+    "react/04_props.md",
+    "react/05_生命周期.md",
+    "Excalidraw/随笔.md",
+    "react/02_组件.md",
+    "react/01_JSX是什么.md",
+    "react/public/Pasted image 20231205215258.png",
+    "react/public/Pasted image 20231205215235.png",
+    "react/public/Pasted image 20231205001005.png",
+    "react/public/Pasted image 20231204233151.png",
+    "react/public/Pasted image 20231204230226.png",
+    "react/public/public",
     "react/public/Pasted image 20231203230951.png",
     "react/public/Pasted image 20231203230740.png",
-    "react/02_组件.md",
     "react/public/Pasted image 20231203205556.png",
     "react/public/Pasted image 20231203205006.png",
     "react/public/Pasted image 20231203204557.png",
-    "react/public/Pasted image 20231203204556.png",
-    "react/public/Pasted image 20231203200122.png",
-    "react/public/Pasted image 20231203200144.png",
     "react/Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a.md",
     "Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a/Untitled 1.png.md",
     "Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a",
