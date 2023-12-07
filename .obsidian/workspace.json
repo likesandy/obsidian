@@ -20,16 +20,17 @@
             }
           },
           {
-            "id": "5ea51019f730fb06",
+            "id": "07b816030c1ddebf",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/随笔.md"
+                "file": "Excalidraw/react.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -79,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "c1567fdccd1b76c5",
@@ -95,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "react/06_ref.md",
+                "file": "Excalidraw/react.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "react/06_ref.md",
+                "file": "Excalidraw/react.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "react/06_ref.md"
+                "file": "Excalidraw/react.md"
               }
             }
           },
@@ -166,13 +168,15 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "f8dacb364770501d",
+  "active": "07b816030c1ddebf",
   "lastOpenFiles": [
-    "react/05_生命周期.md",
     "react/06_ref.md",
+    "react/05_生命周期.md",
+    "Excalidraw/react.md",
+    "Excalidraw/随笔.md",
+    "react/public/Pasted image 20231207222559.png",
     "react/04_props.md",
     "react/03_state.md",
-    "Excalidraw/随笔.md",
     "react/02_组件.md",
     "react/01_JSX是什么.md",
     "react/public/Pasted image 20231205215258.png",
@@ -185,7 +189,6 @@
     "react/public/Pasted image 20231203230740.png",
     "react/public/Pasted image 20231203205556.png",
     "react/public/Pasted image 20231203205006.png",
-    "react/public/Pasted image 20231203204557.png",
     "react/Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a.md",
     "Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a/Untitled 1.png.md",
     "Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a",
@@ -212,8 +215,6 @@
     "docker/Docker重启策略.md",
     "docker/Docker容器通信.md",
     "docker/Docker Compose.md",
-    "nodejs/nestjs/刷新token和单点登录.md",
-    "nodejs/nestjs/权限.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
