@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "react/04_props.md",
+                "file": "react/06_ref.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "react/04_props.md",
+                "file": "react/06_ref.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "react/04_props.md",
+                "file": "react/06_ref.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "react/04_props.md"
+                "file": "react/06_ref.md"
               }
             }
           },
@@ -168,9 +168,10 @@
   },
   "active": "f8dacb364770501d",
   "lastOpenFiles": [
-    "react/03_state.md",
-    "react/04_props.md",
     "react/05_生命周期.md",
+    "react/06_ref.md",
+    "react/04_props.md",
+    "react/03_state.md",
     "Excalidraw/随笔.md",
     "react/02_组件.md",
     "react/01_JSX是什么.md",
@@ -213,7 +214,6 @@
     "docker/Docker Compose.md",
     "nodejs/nestjs/刷新token和单点登录.md",
     "nodejs/nestjs/权限.md",
-    "网络/登录状态保存.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
