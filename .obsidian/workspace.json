@@ -8,19 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "07b816030c1ddebf",
+            "id": "66ab24dcf53d0c5c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "react/事件原理.md",
+                "file": "react/fiber.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "8faa113ee12eb295",
+            "id": "7e3801d33aa4f21f",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "react/事件原理.md",
+                "file": "react/fiber.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "react/事件原理.md",
+                "file": "react/fiber.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "react/事件原理.md"
+                "file": "react/fiber.md"
               }
             }
           },
@@ -166,29 +166,31 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "07b816030c1ddebf",
+  "active": "66ab24dcf53d0c5c",
   "lastOpenFiles": [
-    "react/优化.md",
-    "react/事件原理.md",
-    "react/public/Pasted image 20231211225345.png",
-    "react/public/Pasted image 20231211225020.png",
-    "react/public/Pasted image 20231211224928.png",
-    "react/public/Pasted image 20231211224824.png",
-    "react/渲染调优.md",
-    "react/public/Pasted image 20231210232133.png",
-    "react/public/Pasted image 20231210223826.png",
-    "react/public/Pasted image 20231210221657.png",
+    "react/public/Pasted image 20231212233722.png",
     "Excalidraw/react.md",
+    "react/fiber.md",
+    "react/public/Pasted image 20231212233429.png",
+    "react/public/Pasted image 20231212230912.png",
+    "react/public/Pasted image 20231212230657.png",
+    "react/public/Pasted image 20231212230237.png",
+    "react/public/Pasted image 20231211225345.png",
+    "react/public/Pasted image 20231212212349.png",
+    "react/public/Pasted image 20231212212742.png",
+    "react/public/Pasted image 20231212221519.png",
+    "react/public/Pasted image 20231212230222.png",
+    "react/public/Pasted image 20231212230158.png",
+    "react/事件原理.md",
+    "react/优化.md",
+    "react/渲染调优.md",
     "react/06_ref.md",
-    "react/public/Pasted image 20231209170412.png",
     "react/05_生命周期.md",
     "Excalidraw/随笔.md",
-    "react/public/Pasted image 20231207222559.png",
     "react/04_props.md",
     "react/03_state.md",
     "react/02_组件.md",
     "react/01_JSX是什么.md",
-    "react/public/Pasted image 20231205215258.png",
     "react/public/public",
     "react/Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a.md",
     "Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a/Untitled 1.png.md",
@@ -212,8 +214,6 @@
     "nodejs/nestjs/Nestjs实现邮箱验证码登录.md",
     "nginx/nginx实现灰度系统.md",
     "nginx/nginx.md",
-    "Excalidraw/Drawing 2023-11-14 23.12.01.excalidraw.md",
-    "docker/Docker重启策略.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]

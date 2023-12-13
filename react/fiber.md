@@ -1,0 +1,140 @@
+## 什么是fiber
+fiber（纤维），诞生于v16，目的就是解决大型 React 应用卡顿
+fiber 在 React 中是最小粒度的执行单元
+可以理解为fiber = react 的虚拟DOM
+## 为什么要用fiber
+在v16之前，React 对于虚拟 DOM 是采用递归方式遍历更新的，比如一次更新，就会从应用根部递归更新，递归一旦开始，中途无法中断，随着项目越来越复杂，层级越来越深，导致更新的时间越来越长，给前端交互上的体验就是卡顿
+
+`Reactv16` 为了解决卡顿问题引入了 fiber ，为什么它能解决卡顿，更新 fiber 的过程叫做 `Reconciler`（调和器），每一个 fiber 都可以作为一个执行单元来处理，所以每一个 fiber 可以根据自身的过期时间`expirationTime`（ v17 版本叫做优先级 `lane` ）来判断是否还有空间时间执行更新，如果没有时间更新，就要把主动权交给浏览器去渲染，做一些动画，重排（ reflow ），重绘 repaints 之类的事情，这样就能给用户感觉不是很卡。然后等浏览器空余时间，在通过 `scheduler` （调度器），再次恢复执行单元上来，这样就能本质上中断了渲染，提高了用户体验
+## 全面认识fiber
+### element,fiber,dom三个之间的关系？
+element：react在代码层面上的表象，jsx编写的元素结构会被创建成element对象的形式
+DOM：元素在浏览器上呈现的表象
+fiber：element和DOM的桥梁，每一个类型的element都有一个与之对应的fiber类型，element 变化引起更新流程都是通过 fiber 层面做一次`reconcile`改变，然后对于element，形成新的 DOM 做视图渲染![[Pasted image 20231212212349.png]]
+看一下element与fiber之间的对应关系
+[源码](https://github.com/facebook/react/blob/0cdfef19b96cc6202d48e0812b5069c286d12b04/packages/react-devtools-shared/src/backend/renderer.js#L204)![[Pasted image 20231212212742.png]]
+这里讲两个容易忘的
+```jsx
+export const HostComponent = 5;           // dom 元素 比如 <div>
+export const HostText = 6;                // 文本节点
+```
+### fiber保存了那些信息
+`react-reconciler/src/ReactFiber.js`
+[FiberNode源码](https://github.com/facebook/react/blob/0cdfef19b96cc6202d48e0812b5069c286d12b04/packages/react-reconciler/src/ReactFiber.js#L135)
+```jsx
+this.tag = tag; // fiber类型
+this.key = key; // key reconcile子节点的时候用到
+this.elementType = null;  // 组件类型（类，函数，DOM）
+this.type = null; // 元素类型
+this.stateNode = null;  // 真实dom元素
+// Fiber
+this.return = null; //  父级fiber
+this.child = null;  // 子级fiber
+this.sibling = null;  // 兄弟fiber
+this.index = 0; // 索引
+this.ref = null;  //  ref指向
+this.refCleanup = null; // 清除ref
+this.pendingProps = pendingProps; // 在一次更新中，代表element创建
+this.memoizedProps = null;  // 记录上一次更新完毕后的props
+this.updateQueue = null;  //  管理组件状态更新的
+this.memoizedState = null;  //  类组件保存state信息，函数组件保存hooks信息，dom元素为null
+this.dependencies = null; // 依赖项
+this.mode = mode; // fiber树的模式,比如 ConcurrentMode 模式
+// Effects
+this.flags = NoFlags; // 标识
+this.subtreeFlags = NoFlags; // 子树标识
+this.deletions = null;  // 要被删除的元素或组件（标记）
+this.lanes = NoLanes; // 通过不同过期时间，判断任务是否过期(v17优先级)
+this.childLanes = NoLanes; // 子树的优先级
+this.alternate = null;  // 双缓存树，指向缓存的fiber。更新阶段，两颗树互相交替
+```
+### 每一个fiber如何建立起关联的
+每一个 fiber 是通过 return ， child ，sibling 三个属性建立起联系的
+比如项目中元素结构是这样的：
+```jsx
+import { useState } from 'react'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  const handleCount = () => {
+    setCount(count + 1)
+  }
+
+  return (
+    <div>
+      我是文本
+      <p>我是p标签</p>
+      <button onClick={handleCount}>我是button标签{count}</button>
+    </div>
+  )
+}
+
+export default App
+```
+![[Pasted image 20231212230158.png]]
+## Fiber更新机制
+### 初始化
+**第一步：创建fiberRoot和rootFiber**
+- `fiberRoot`：首次构建应用， 创建一个 fiberRoot ，作为整个 React 应用的根基
+- `rootFiber`： 通过 ReactDOM.render 渲染出来的，一个 React 应用可以有多 ReactDOM.render 创建的 rootFiber ，但是只能有一个 fiberRoot（应用根节点）
+第一次挂载的过程中，会将 fiberRoot 和 rootFiber 建立起关联
+`react-reconciler/src/ReactFiberRoot.js`
+```jsx
+export function createFiberRoot() {
+  const fiberRoot = new FiberRootNode()
+  const rootFiber = createHostRootFiber();
+  fiberRoot.current = rootFiber
+  return fiberRoot
+}
+```
+![[Pasted image 20231212230222.png]]
+**第二步：workInProgress和current**
+到了这一步，开始到正式渲染阶段，会进入 `beginwork` 流程
+首先我们需要了解两个概念
+- workInProgress：正在内存中构建的 Fiber 树，在一次更新中，所有的更新都是发生在 workInProgress 树上。在一次更新之后，workInProgress 树上的状态是最新的状态，那么它将变成 current 树用于渲染视图
+- current：正在视图层渲染的树叫做 current 树
+
+来到`rootFiber`的渲染流程，首先会复用当前 `current` 树（ rootFiber ）的 `alternate` 作为 `workInProgress`，如果没有 `alternate` （初始化的 `rootFiber` 是没有 `alternate` ），那么会创建一个 fiber 作为 workInProgress。会用 `alternate` 将新创建的 `workInProgress` 与 `current` 树建立起关联。这个关联过程只有初始化第一次创建 `alternate` 时候进行
+![[Pasted image 20231212230237.png]]
+**第三步：深度`reconcile`子节点，渲染视图**
+在新创建的 `alternates` 上，完成整个 fiber 树的遍历，包括 fiber 的创建
+![[Pasted image 20231212230657.png]]
+最后会以 workInProgress 作为最新的渲染树，fiberRoot 的 current 指针指向 workInProgress 使其变为 current Fiber 树。到此完成初始化流程
+![[Pasted image 20231212230912.png]]
+### 更新
+开发者点击一次按钮发生更新，接下来会发生什么呢? 首先会走如上的逻辑，重新创建一颗 `workInProgresss` 树，复用当前 `current` 树上的 `alternate` ，作为新的 `workInProgress` ，由于初始化 `rootfiber` 有 `alternate` ，所以对于剩余的子节点，React 还需要创建一份，和 `current` 树上的 `fiber` 建立起 `alternate` 关联。渲染完毕后，`workInProgresss` 再次变成 `current` 树
+![[Pasted image 20231212233722.png]]
+### 双缓冲树
+`canvas` 绘制动画的时候，如果上一帧计算量比较大，导致清除上一帧画面到绘制当前帧画面之间有较长间隙，就会出现白屏。为了解决这个问题，`canvas` 在内存中绘制当前动画，绘制完毕后直接用当前帧替换上一帧画面，由于省去了两帧替换间的计算时间，不会出现从白屏到出现画面的闪烁情况。这种在内存中构建并直接替换的技术叫做**双缓存**
+
+React 用 `workInProgress` 树(内存中构建的树) 和 `current` (渲染树) 来实现更新逻辑。双缓存一个在内存中构建，一个渲染视图，两颗树用 `alternate` 指针相互指向，在下一次渲染的时候，直接复用缓存树做为下一次渲染树，上一次的渲染树又作为缓存树，这样可以防止只用一颗树更新状态的丢失的情况，又加快了 `DOM` 节点的替换与更新
+## render和commit
+render 阶段和 commit 阶段是整个 fiber Reconciler 的核心
+在此之前先看一下fiber的遍历开始-`workLoop`
+### render
+`react-reconciler/src/ReactFiberWorkLoop.js`
+[workLoopSync源码](https://github.com/facebook/react/blob/0cdfef19b96cc6202d48e0812b5069c286d12b04/packages/react-reconciler/src/ReactFiberWorkLoop.js#L2040C13-L2040C13)
+```jsx
+function workLoopSync() {
+  while (workInProgress !== null) {
+    performUnitOfWork(workInProgress);
+  }
+}
+```
+每一个 `fiber` 可以看作一个执行的单元，在`reconcile`过程中，每一个发生更新的 fiber 都会作为一次 `workInProgress` 。那么 `workLoopSync` 就是执行每一个单元的调度器，如果渲染没有被中断，那么 `workLoop` 会遍历一遍 fiber 树
+
+`performUnitOfWork` 包括两个阶段 `beginWork` 和 `completeWork`
+`react-reconciler/src/ReactFiberWorkLoop.js`
+```jsx
+function performUnitOfWork(){
+    next = beginWork(current, unitOfWork, renderExpirationTime);
+    if (next === null) {
+       next = completeUnitOfWork(unitOfWork);
+    }
+}
+```
+`beginWork`：是向下`reconcile`的过程。就是由 fiberRoot 按照 child 指针逐层向下`reconcile`，期间会执行函数组件，实例类组件，diff 调和子节点，打不同effectTag
+`completeUnitOfWork`：是向上归并的过程，如果有兄弟节点，会返回 sibling兄弟，没有返回 return 父级，一直返回到 fiebrRoot ，期间可以形成effectList，对于初始化流程会创建 DOM ，对于 DOM 元素进行事件收集，处理style，className等。
+
+这么一上一下，构成了整个 fiber 树的调和
