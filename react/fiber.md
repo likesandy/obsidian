@@ -138,3 +138,86 @@ function performUnitOfWork(){
 `completeUnitOfWork`：是向上归并的过程，如果有兄弟节点，会返回 sibling兄弟，没有返回 return 父级，一直返回到 fiebrRoot ，期间可以形成effectList，对于初始化流程会创建 DOM ，对于 DOM 元素进行事件收集，处理style，className等。
 
 这么一上一下，构成了整个 fiber 树的调和
+#### 向下reconcile `beginWork`
+`react-reconciler/src/ReactFiberBeginWork.js`
+
+- 对于组件，执行部分生命周期，执行 render ，得到最新的 children
+- 向下遍历调和 children ，复用 oldFiber ( diff 算法)
+- 打不同的副作用标签 effectTag ，比如类组件的生命周期，或者元素的增加，删除，更新
+
+**reconcileChildren**
+`react-reconciler/src/ReactFiberBeginWork.js`
+[reconcileChildren源码](https://github.com/facebook/react/blob/493610f299ddf7d06e147e60dc4f2b97482982d2/packages/react-reconciler/src/ReactFiberBeginWork.js#L325)
+```jsx
+function reconcileChildren() {
+  if (current === null) {
+    // 初始化
+    workInProgress.child = mountChildFibers(
+      workInProgress,
+      null,
+      nextChildren,
+      renderLanes
+    )
+  } else {
+    // 更新阶段，diff Children
+    workInProgress.child = reconcileChildFibers(
+      workInProgress,
+      current.child,
+      nextChildren,
+      renderLanes
+    )
+  }
+}
+```
+**EffectTag**
+列举几个常用的 effectTag
+```jsx
+export const Placement = /*             */ 0b0000000000010;  // 插入节点
+export const Update = /*                */ 0b0000000000100;  // 更新fiber
+export const Deletion = /*              */ 0b0000000001000;  // 删除fiebr
+export const Snapshot = /*              */ 0b0000100000000;  // 快照
+export const Passive = /*               */ 0b0001000000000;  // useEffect的副作用
+export const Callback = /*              */ 0b0000000100000;  // setState的callback
+export const Ref = /*                   */ 0b0000010000000;  // ref
+```
+#### 向上归并 completeUnitOfWork
+- 首先 completeUnitOfWork 会将 effectTag 的 Fiber 节点会被保存在一条被称为 effectList 的单向链表中。在 commit 阶段，将不再需要遍历每一个 fiber ，只需要执行更新 effectList 就可以了。
+- completeWork 阶段对于组件处理 context ；对于元素标签初始化，会创建真实 DOM ，将子孙 DOM 节点插入刚生成的 DOM 节点中；会触发 diffProperties 处理 props ，比如事件收集，style，className 处理
+
+### commit
+ommit 阶段做的事情是：
+- 一方面是对一些生命周期和副作用钩子的处理，比如 componentDidMount ，函数组件的 useEffect ，useLayoutEffect
+- 另一方面就是在一次更新中，添加节点（ `Placement` ），更新节点（ `Update` ），删除节点（ `Deletion` ），还有就是一些细节的处理，比如 ref 的处理
+
+commit 细分可以分为：
+- `Before mutation` 阶段（执行 DOM 操作前）
+- `mutation` 阶段（执行 DOM 操作）
+- `layout` 阶段（执行 DOM 操作后）
+#### Before mutation
+`react-reconciler/src/ReactFiberCommitWork.js`
+```jsx
+
+```
+
+Before mutation 阶段做的事主要有以下内容：
+- 因为 Before mutation 还没修改真实的 DOM ，是获取 DOM 快照的最佳时期，如果是类组件有 getSnapshotBeforeUpdate ，那么会执行这个生命周期。
+- 会异步调用 useEffect ，其目的就是防止同步执行时阻塞浏览器做视图渲染
+#### Mutation
+`react-reconciler/src/ReactFiberCommitWork.js`
+```jsx
+commitMutationEffects
+```
+
+mutation 阶段做的事情有：
+- 置空 ref
+- 对新增元素，更新元素，删除元素。进行真实的 DOM 操作。
+
+#### Layout
+`react-reconciler/src/ReactFiberCommitWork.js`
+```jsx
+commitLayoutEffects
+```
+
+Layout 阶段 DOM 已经更新完毕，Layout 做的事情有：
+- commitLayoutEffectOnFiber 对于类组件，会执行生命周期，setState 的callback，对于函数组件会执行 useLayoutEffect 钩子。  
+- 如果有 ref ，会重新赋值 ref

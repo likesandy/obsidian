@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "react/fiber.md",
+                "file": "react/hooks.md",
                 "mode": "source",
                 "source": false
               }
@@ -79,7 +79,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "c1567fdccd1b76c5",
@@ -95,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "react/fiber.md",
+                "file": "react/hooks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "react/fiber.md",
+                "file": "react/hooks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "react/fiber.md"
+                "file": "react/hooks.md"
               }
             }
           },
@@ -168,9 +169,12 @@
   },
   "active": "66ab24dcf53d0c5c",
   "lastOpenFiles": [
-    "react/public/Pasted image 20231212233722.png",
+    "react/public/Pasted image 20231213232125.png",
     "Excalidraw/react.md",
+    "react/hooks.md",
+    "react/05_生命周期.md",
     "react/fiber.md",
+    "react/public/Pasted image 20231212233722.png",
     "react/public/Pasted image 20231212233429.png",
     "react/public/Pasted image 20231212230912.png",
     "react/public/Pasted image 20231212230657.png",
@@ -180,12 +184,10 @@
     "react/public/Pasted image 20231212212742.png",
     "react/public/Pasted image 20231212221519.png",
     "react/public/Pasted image 20231212230222.png",
-    "react/public/Pasted image 20231212230158.png",
     "react/事件原理.md",
     "react/优化.md",
     "react/渲染调优.md",
     "react/06_ref.md",
-    "react/05_生命周期.md",
     "Excalidraw/随笔.md",
     "react/04_props.md",
     "react/03_state.md",
@@ -213,7 +215,6 @@
     "数据库/Redis/redis.md",
     "nodejs/nestjs/Nestjs实现邮箱验证码登录.md",
     "nginx/nginx实现灰度系统.md",
-    "nginx/nginx.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
