@@ -72,5 +72,48 @@ function finishRenderingHooks() {
 ## hooks 如何和 fiber 建立起关系
 每一个hooks 初始化都会执行 mountWorkInProgressHook
 `react-reconciler/src/ReactFiberHooks.js`
+[mountWorkInProgressHook源码](https://github.com/facebook/react/blob/493610f299ddf7d06e147e60dc4f2b97482982d2/packages/react-reconciler/src/ReactFiberHooks.js#L952)
 ```jsx
+function mountWorkInProgressHook() {
+  // 每一个 hooks 执行都会产生一个 hook 对象
+  const hook = {
+    // hook信息
+    memoizedState: null,
+    // 初始化state
+    baseState: null,
+    // 更新队列，用于commit阶段更新
+    baseQueue: null,
+    // 记录更新的各种状态
+    queue: null,
+    // 每一个 hook按照顺序通过 next 和下一个 hook 建立起关联（链表）
+    next: null,
+  }
+
+  // 只有一个hook
+  if (workInProgressHook === null) {
+    currentlyRenderingFiber.memoizedState = workInProgressHook = hook
+  } else {
+    //  有多个hook
+    workInProgressHook = workInProgressHook.next = hook
+  }
+
+  return workInProgressHook
+}
 ```
+
+假设在一个组件中这么写
+```jsx
+export default function Index(){
+    const [ number,setNumber ] = React.useState(0) // 第一个hooks
+    const [ num, setNum ] = React.useState(1)      // 第二个hooks
+    const dom = React.useRef(null)                 // 第三个hooks
+    React.useEffect(()=>{                          // 第四个hooks
+        console.log(dom.current)
+    },[])
+    return <div ref={dom} >
+        <div onClick={()=> setNumber(number + 1 ) } > { number } </div>
+        <div onClick={()=> setNum(num + 1) } > { num }</div>
+    </div>
+}
+```
+![[Pasted image 20231214233208.png]]
