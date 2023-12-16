@@ -219,5 +219,140 @@ function dispatchSetState() {
 改变了state以后等到组件渲染，那么就到了再一次执行 useState，此时走的是更新流程，更新时执行的是`updateState`
 `react-reconciler/src/ReactFiberHooks.js`
 ```jsx
+function updateState(initialState) {
+  return updateReducer(basicStateReducer, initialState);
+}
 
+function updateReducer() {
+  const hook = updateWorkInProgressHook();
+
+  // 获取待更新队列
+  let baseQueue = hook.baseQueue;
+  let first = baseQueue.next
+  let update = first;
+  // 把待更新的pending队列取出来。合并到 baseQueue
+  do {
+    if (baseQueue) {
+      // 获取初始化的state
+      let newState = hook.baseState;
+      // 更新state
+      newState = reducer(newState, action);
+    }
+  } while (update !== null && update !== first);
+
+  hook.memoizedState = newState;
+  return [hook.memoizedState, action];
+}
+```
+![[Pasted image 20231216164554.png]]
+## 处理副作用
+在 [[fiber]] 章节讲了，在 render 阶段，实际没有进行真正的 DOM 元素的增加，删除，React 把想要做的不同操作打成不同的 effectTag ，等到commit 阶段，统一处理这些副作用，包括 DOM 元素增删改，执行一些生命周期等。hooks 中的 useEffect 和 useLayoutEffect 也是副作用，接下来以 effect 为例子，看一下 React 是如何处理 useEffect 副作用的
+```jsx
+function mountEffect(create, deps) {
+function mountEffect(create, deps) {
+  return mountEffectImpl(create, deps);
+}
+
+function mountEffectImpl(create, deps) {
+  // 获取当前的hook
+  const hook = mountWorkInProgressHook();
+
+  // 判断deps是否存在
+  const nextDeps = deps ? deps : null;
+  //  PassiveEffect | PassiveStaticEffect
+  // 给当前的fiber添加effectTag
+  currentlyRenderingFiber.flags |= fiberFlags;
+
+  // 创建一个effect添加到hook上
+  // 如果存在多个effect，会形成一个链表，绑定在函数组件 fiber 的 updateQueue 上
+  // 因为可能存在多个useEffect
+  // HookHasEffect是useEffect 的标识符
+  // 对于 useLayoutEffect 第一次更新会打上  HookLayout  的标识符
+  // 通过标识符，证明是 useEffect 还是 useLayoutEffect ，接下来 React 会同步处理 useLayoutEffect ，异步处理 useEffect **
+  hook.memoizedState = pushEffect(HookHasEffect, destroy, create, nextDeps);
+}
+```
+![[Pasted image 20231216170206.png]]
+更新effect
+```jsx
+function updateEffect(create, deps) {
+  updateEffectImpl(PassiveEffect, HookPassive, create, deps);
+}
+
+function updateEffectImpl() {
+  const hook = updateWorkInProgressHook();
+  const nextDeps = deps ?? null
+
+  const effect = hook.memoizedState;
+
+  // 正在执行的hook，因为可能存在多个useEffect
+  if (currentHook) {
+    if (nextDeps) {
+      const prevDeps = effect.deps;
+      // 如果deps没有发生变化，更新effect list即可
+      if (areHookInputsEqual(nextDeps, prevDeps)) {
+        pushEffect(effect);
+        return;
+      }
+    }
+  }
+
+  // 如果deps依赖项发生改变，赋予 effectTag ，在commit节点，就会再次执行我们的effect
+  currentlyRenderingFiber.flags |= PassiveEffect
+  hook.memoizedState = pushEffect(HookHasEffect, destroy, undefined, nextDeps);
+}
+```
+## Ref
+在 [[06_ref]] 章节详细介绍过，useRef 就是创建并维护一个 ref 原始对象。用于获取原生 DOM 或者组件实例，或者保存一些状态等
+
+创建ref
+```jsx
+function mountRef(initialValue) {
+  const hook = mountWorkInProgressHook()
+
+  const ref = { current: initialValue };
+  hook.memoizedState = ref;
+  return ref;
+}
+```
+更新ref
+```jsx
+function updateRef(initialValue) {
+  const hook = updateWorkInProgressHook();
+
+  return hook.memoizedState;
+}
+```
+## useMemo
+创建
+```jsx
+function mountMemo(nextCreate, deps) {
+  const hook = mountWorkInProgressHook();
+  const nextDeps = deps ?? null
+
+  // 执行函数，缓存函数结果
+  const nextValue = nextCreate();
+  hook.memoizedState = [nextValue, nextDeps];
+  return nextValue;
+}
+```
+更新
+```jsx
+function updateMemo(nextCreate, deps) {
+  const hook = updateWorkInProgressHook();
+  const nextDeps = deps ?? null
+
+  const prevState = hook.memoizedState;
+  if (nextDeps) {
+    const prevDeps = prevState[1]
+    // 如果deps没有变化，直接返回上一次的值
+    if (areHookInputsEqual(nextDeps, prevDeps)) {
+      return prevState[0];
+    }
+  }
+  // 如果deps变化了，重新计算值
+  const nextValue = nextCreate();
+  hook.memoizedState = [nextValue, nextDeps];
+  return nextValue;
+}
 ```
