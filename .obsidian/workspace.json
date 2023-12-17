@@ -13,9 +13,91 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "react/react-router.md",
+                "file": "react/基础篇/01_JSX是什么.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "bab42bbbfbdaff75",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "react/基础篇/02_组件.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c683c882e4a7b270",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "react/基础篇/03_state.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "667baabd61f5544b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "react/基础篇/04_props.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "edeab23d2b3597cf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "react/基础篇/05_生命周期.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6dd4f7759ab9100d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "react/基础篇/06_ref.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ecea064e052e90a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "react/原理篇/事件原理.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a617fd588d785d01",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/react.md"
               }
             }
           },
@@ -29,7 +111,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -79,7 +162,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "c1567fdccd1b76c5",
@@ -95,7 +179,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "react/react-router.md",
+                "file": "Excalidraw/react.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +196,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "react/react-router.md",
+                "file": "Excalidraw/react.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +219,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "react/react-router.md"
+                "file": "Excalidraw/react.md"
               }
             }
           },
@@ -166,10 +250,23 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "5f661e901c23997a",
+  "active": "a617fd588d785d01",
   "lastOpenFiles": [
-    "react/hooks.md",
-    "react/react-router.md",
+    "react/原理篇/beginWork和render全流程.md",
+    "react/基础篇/04_props.md",
+    "react/基础篇/01_JSX是什么.md",
+    "react/原理篇/事件原理.md",
+    "react/原理篇/react-router.md",
+    "react/原理篇/fiber.md",
+    "react/优化篇/优化.md",
+    "react/原理篇",
+    "react/优化篇",
+    "react/基础篇/02_组件.md",
+    "react/基础篇/06_ref.md",
+    "react/基础篇/05_生命周期.md",
+    "react/基础篇/03_state.md",
+    "react/基础篇",
+    "react/原理篇/hooks.md",
     "react/public/Pasted image 20231216170206.png",
     "react/public/Pasted image 20231216170156.png",
     "react/public/Pasted image 20231216170154.png",
@@ -181,18 +278,9 @@
     "react/public/Pasted image 20231215213805.png",
     "react/public/Pasted image 20231214233208.png",
     "react/public/Pasted image 20231213232125.png",
-    "react/05_生命周期.md",
-    "react/fiber.md",
     "react/public/Pasted image 20231212233722.png",
-    "react/事件原理.md",
-    "react/优化.md",
-    "react/渲染调优.md",
-    "react/06_ref.md",
+    "react/优化篇/渲染调优.md",
     "Excalidraw/随笔.md",
-    "react/04_props.md",
-    "react/03_state.md",
-    "react/02_组件.md",
-    "react/01_JSX是什么.md",
     "react/public/public",
     "react/Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a.md",
     "Untitled c1bd2b83bf1d4dab981bcdd3cab96d7a/Untitled 1.png.md",
@@ -202,18 +290,14 @@
     "Excalidraw/fonts/HanyiSentyRubber.ttf",
     "Excalidraw/fonts",
     "Excalidraw/新建文件夹",
-    "Excalidraw",
     "Excalidraw/Drawing 2023-12-02 18.08.12.excalidraw.md",
-    "react/public",
     "nodejs/nestjs/REPL.md",
-    "react/未命名",
     "nodejs/Node实现收发邮件.md",
     "nodejs/nestjs/sharp实现图片压缩.md",
     "nodejs/nestjs/SSE.md",
     "数据库/Redis/定时任务+redis实现阅读量计数.md",
     "nodejs/nestjs/redis推荐.md",
     "数据库/Redis/redis.md",
-    "nodejs/nestjs/Nestjs实现邮箱验证码登录.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
