@@ -1,11 +1,12 @@
 ## 什么是fiber
-fiber（纤维），诞生于v16，目的就是解决大型 React 应用卡顿
-fiber 在 React 中是最小粒度的执行单元
-可以理解为fiber = react 的虚拟DOM
-## 为什么要用fiber
-在v16之前，React 对于虚拟 DOM 是采用递归方式遍历更新的，比如一次更新，就会从应用根部递归更新，递归一旦开始，中途无法中断，随着项目越来越复杂，层级越来越深，导致更新的时间越来越长，给前端交互上的体验就是卡顿
-
-`Reactv16` 为了解决卡顿问题引入了 fiber ，为什么它能解决卡顿，更新 fiber 的过程叫做 `Reconciler`（调和器），每一个 fiber 都可以作为一个执行单元来处理，所以每一个 fiber 可以根据自身的过期时间`expirationTime`（ v17 版本叫做优先级 `lane` ）来判断是否还有空间时间执行更新，如果没有时间更新，就要把主动权交给浏览器去渲染，做一些动画，重排（ reflow ），重绘 repaints 之类的事情，这样就能给用户感觉不是很卡。然后等浏览器空余时间，在通过 `scheduler` （调度器），再次恢复执行单元上来，这样就能本质上中断了渲染，提高了用户体验
+fiber（纤维），fiber 在 React 中是最小粒度的执行单元可以理解为fiber = react 的虚拟DOM
+fiber包含三层含义：
+- 架构：v15数据保存在递归调用栈中，所以被称为`stack reconcile`，v16的reconcile基于fiber节点实现，被称为`fiber reconcile`
+- 数据结构：每个fiber节点对应一个`react element`，保存了改组件的类型，对应的DOM节点等信息
+- 工作单元：每个fiber节点保存了本次更新中该组件改变的状态、要执行的工作（插入，更新，删除）
+## fiber的起源
+在`React15`及以前，`Reconciler`采用递归的方式创建虚拟DOM，递归过程是不能中断的。如果组件树的层级很深，递归会占用线程很多时间，造成卡顿
+`Reactv16` 为了解决卡顿问题引入了 fiber ，更新 fiber 的过程叫做 `Reconciler`（调和器），每一个 fiber 都可以作为一个执行单元来处理，所以每一个 fiber 可以根据自身的过期时间`expirationTime`（ v17 版本叫做优先级 `lane` ）来判断是否还有空间时间执行更新，如果没有时间更新，就要把主动权交给浏览器去渲染，做一些动画，重排（ reflow ），重绘 repaints 之类的事情，然后等浏览器空余时间，在通过 `scheduler` （调度器），再次恢复执行单元上来，这样就能本质上中断了渲染，提高了用户体验
 ## 全面认识fiber
 ### element,fiber,dom三个之间的关系？
 element：react在代码层面上的表象，jsx编写的元素结构会被创建成element对象的形式
@@ -18,7 +19,7 @@ fiber：element和DOM的桥梁，每一个类型的element都有一个与之对�
 export const HostComponent = 5;           // dom 元素 比如 <div>
 export const HostText = 6;                // 文本节点
 ```
-### fiber保存了那些信息
+### fiber结构
 `react-reconciler/src/ReactFiber.js`
 [FiberNode源码](https://github.com/facebook/react/blob/0cdfef19b96cc6202d48e0812b5069c286d12b04/packages/react-reconciler/src/ReactFiber.js#L135)
 ```jsx
@@ -44,7 +45,7 @@ this.mode = mode; // fiber树的模式,比如 ConcurrentMode 模式
 this.flags = NoFlags; // 标识
 this.subtreeFlags = NoFlags; // 子树标识
 this.deletions = null;  // 要被删除的元素或组件（标记）
-this.lanes = NoLanes; // 通过不同过期时间，判断任务是否过期(v17优先级)
+this.lanes = NoLanes; // reconciler 优先级
 this.childLanes = NoLanes; // 子树的优先级
 this.alternate = null;  // 双缓存树，指向缓存的fiber。更新阶段，两颗树互相交替
 ```
@@ -76,9 +77,10 @@ export default App
 ## Fiber更新机制
 ### 初始化
 **第一步：创建fiberRoot和rootFiber**
-- `fiberRoot`：首次构建应用， 创建一个 fiberRoot ，作为整个 React 应用的根基
-- `rootFiber`： 通过 ReactDOM.render 渲染出来的，一个 React 应用可以有多 ReactDOM.render 创建的 rootFiber ，但是只能有一个 fiberRoot（应用根节点）
-第一次挂载的过程中，会将 fiberRoot 和 rootFiber 建立起关联
+- `fiberRoot`：首次构建应用， 创建一个 fiberRoot ，作为整个 React 应用的根节点
+- `rootFiber`： 通过 ReactDOM.render 渲染出来的，如上 Index 可以作为一个 rootFiber。一个 React 应用可以有多 ReactDOM.render 创建的 rootFiber ，但是只能有一个 fiberRoot
+
+`fiberRoot`的`current`会指向当前页面上已渲染内容对应`Fiber树`，即`current Fiber树`
 `react-reconciler/src/ReactFiberRoot.js`
 ```jsx
 export function createFiberRoot() {
@@ -89,13 +91,7 @@ export function createFiberRoot() {
 }
 ```
 ![[Pasted image 20231212230222.png]]
-**第二步：workInProgress和current**
-到了这一步，开始到正式渲染阶段，会进入 `beginwork` 流程
-首先我们需要了解两个概念
-- workInProgress：正在内存中构建的 Fiber 树，在一次更新中，所有的更新都是发生在 workInProgress 树上。在一次更新之后，workInProgress 树上的状态是最新的状态，那么它将变成 current 树用于渲染视图
-- current：正在视图层渲染的树叫做 current 树
-
-来到`rootFiber`的渲染流程，首先会复用当前 `current` 树（ rootFiber ）的 `alternate` 作为 `workInProgress`，如果没有 `alternate` （初始化的 `rootFiber` 是没有 `alternate` ），那么会创建一个 fiber 作为 workInProgress。会用 `alternate` 将新创建的 `workInProgress` 与 `current` 树建立起关联。这个关联过程只有初始化第一次创建 `alternate` 时候进行
+接下来进入`render阶段`，根据组件返回的`JSX`在内存中依次创建`Fiber节点`并连接在一起构建`Fiber树`，被称为`workInProgress Fiber树`。（下图中右侧为内存中构建的树，左侧为页面显示的树）
 ![[Pasted image 20231212230237.png]]
 **第三步：深度`reconcile`子节点，渲染视图**
 在新创建的 `alternates` 上，完成整个 fiber 树的遍历，包括 fiber 的创建
@@ -103,12 +99,18 @@ export function createFiberRoot() {
 最后会以 workInProgress 作为最新的渲染树，fiberRoot 的 current 指针指向 workInProgress 使其变为 current Fiber 树。到此完成初始化流程
 ![[Pasted image 20231212230912.png]]
 ### 更新
-开发者点击一次按钮发生更新，接下来会发生什么呢? 首先会走如上的逻辑，重新创建一颗 `workInProgresss` 树，复用当前 `current` 树上的 `alternate` ，作为新的 `workInProgress` ，由于初始化 `rootfiber` 有 `alternate` ，所以对于剩余的子节点，React 还需要创建一份，和 `current` 树上的 `fiber` 建立起 `alternate` 关联。渲染完毕后，`workInProgresss` 再次变成 `current` 树
+状态发生更新，接下来会发生什么呢?
+- 首先会走如上的逻辑，重新创建一颗 `workInProgresss` 树，复用当前 `current` 树上的 `alternate` ，作为新的 `workInProgress` ，由于初始化 `rootfiber` 有 `alternate` ，所以对于剩余的子节点，React 还需要创建一份，和 `current` 树上的 `fiber` 建立起 `alternate` 关联。渲染完毕后，`workInProgresss` 再次变成 `current` 树
+在构建`workInProgress Fiber树`时会尝试复用`current Fiber树`中已有的`Fiber节点`内的属性（这个决定是否复用的过程就是Diff算法）
 ![[Pasted image 20231212233722.png]]
-### 双缓冲树
-`canvas` 绘制动画的时候，如果上一帧计算量比较大，导致清除上一帧画面到绘制当前帧画面之间有较长间隙，就会出现白屏。为了解决这个问题，`canvas` 在内存中绘制当前动画，绘制完毕后直接用当前帧替换上一帧画面，由于省去了两帧替换间的计算时间，不会出现从白屏到出现画面的闪烁情况。这种在内存中构建并直接替换的技术叫做**双缓存**
+### 双缓存树
+当我们用`canvas`绘制动画，每一帧绘制前都会清除上一帧的画面。
+如果当前帧画面计算量比较大，导致清除上一帧画面到绘制当前帧画面之间有较长间隙，就会出现白屏。
 
-React 用 `workInProgress` 树(内存中构建的树) 和 `current` (渲染树) 来实现更新逻辑。双缓存一个在内存中构建，一个渲染视图，两颗树用 `alternate` 指针相互指向，在下一次渲染的时候，直接复用缓存树做为下一次渲染树，上一次的渲染树又作为缓存树，这样可以防止只用一颗树更新状态的丢失的情况，又加快了 `DOM` 节点的替换与更新
+为了解决这个问题，我们可以在内存中绘制当前帧动画，绘制完毕后直接用当前帧替换上一帧画面，由于省去了两帧替换间的计算时间，不会出现从白屏到出现画面的闪烁情况。
+这种在内存中构建并直接替换的技术叫做**双缓存**
+
+React 用 `workInProgress` 树(内存中构建的树) 和 `current` (当前屏幕上显示内容的fiber树) 来实现更新逻辑。双缓存一个在内存中构建，一个渲染视图，两颗树用 `alternate` 指针相互指向，每次状态更新都会产生新的`workInProgress Fiber树`，通过`current`与`workInProgress`的替换，完成`DOM`更新
 ## render和commit
 render 阶段和 commit 阶段是整个 fiber Reconciler 的核心
 在此之前先看一下fiber的遍历开始-`workLoop`
