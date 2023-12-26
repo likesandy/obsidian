@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "react/原理篇/fiber.md",
+                "file": "react/v18.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "c1567fdccd1b76c5",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "react/原理篇/fiber.md",
+                "file": "react/v18.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "react/原理篇/fiber.md",
+                "file": "react/v18.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "react/原理篇/fiber.md"
+                "file": "react/v18.md"
               }
             }
           },
@@ -159,7 +158,12 @@
   },
   "active": "4dbaeef10b44b8de",
   "lastOpenFiles": [
+    "react/原理篇/hooks.md",
+    "react/v18.md",
     "react/原理篇/调度和时间片.md",
+    "react/优化篇/优化.md",
+    "react/public/Pasted image 20231202174113.png",
+    "react/原理篇/fiber.md",
     "react/原理篇/public/Pasted image 20231217230658.png",
     "react/原理篇/public/Pasted image 20231217223309.png",
     "react/原理篇/public",
@@ -169,8 +173,6 @@
     "react/基础篇/04_props.md",
     "react/基础篇/01_JSX是什么.md",
     "react/原理篇/react-router.md",
-    "react/原理篇/fiber.md",
-    "react/优化篇/优化.md",
     "react/原理篇",
     "react/优化篇",
     "react/基础篇/02_组件.md",
@@ -178,7 +180,6 @@
     "react/基础篇/05_生命周期.md",
     "react/基础篇/03_state.md",
     "react/基础篇",
-    "react/原理篇/hooks.md",
     "react/public/Pasted image 20231216170206.png",
     "react/public/Pasted image 20231216170156.png",
     "react/public/Pasted image 20231216170154.png",
@@ -187,7 +188,6 @@
     "react/public/Pasted image 20231215222254.png",
     "Excalidraw/Drawing 2023-12-15 21.57.55.excalidraw.md",
     "react/public/Pasted image 20231215213805.png",
-    "react/public/Pasted image 20231214233208.png",
     "react/优化篇/渲染调优.md",
     "Excalidraw/随笔.md",
     "react/public/public",
@@ -203,7 +203,6 @@
     "nodejs/Node实现收发邮件.md",
     "nodejs/nestjs/sharp实现图片压缩.md",
     "nodejs/nestjs/SSE.md",
-    "数据库/Redis/定时任务+redis实现阅读量计数.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
