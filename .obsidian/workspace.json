@@ -13,9 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "react/v18.md",
+                "file": "react/原理篇/hooks.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "33fdf56d156fe7ea",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.3"
               }
             }
           },
@@ -31,7 +41,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "react/v18.md",
+                "file": "react/原理篇/hooks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "react/v18.md",
+                "file": "react/原理篇/hooks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "react/v18.md"
+                "file": "react/原理篇/hooks.md"
               }
             }
           },
@@ -168,14 +179,14 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "4dbaeef10b44b8de",
+  "active": "33fdf56d156fe7ea",
   "lastOpenFiles": [
+    "react/v18.md",
     "react/基础篇/03_state.md",
     "react/原理篇/hooks.md",
     "react/基础篇/01_JSX是什么.md",
     "react/基础篇/02_组件.md",
     "react/基础篇/05_生命周期.md",
-    "react/v18.md",
     "react/原理篇/调度和时间片.md",
     "react/优化篇/优化.md",
     "react/public/Pasted image 20231202174113.png",
