@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "ensureRootIsScheduled",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +77,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -154,8 +155,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5,
-    "collapsed": true
+    "width": 274.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -171,14 +171,15 @@
   "active": "4dbaeef10b44b8de",
   "lastOpenFiles": [
     "react/原理篇/hooks.md",
+    "react/基础篇/03_state.md",
+    "react/基础篇/04_props.md",
     "react/原理篇/fiber.md",
+    "react/v18.md",
+    "react/基础篇/02_组件.md",
     "react/原理篇/beginWork和render全流程.md",
     "react/优化篇/优化.md",
     "react/优化篇/渲染调优.md",
-    "react/v18.md",
-    "react/基础篇/03_state.md",
     "react/基础篇/01_JSX是什么.md",
-    "react/基础篇/02_组件.md",
     "react/基础篇/05_生命周期.md",
     "react/原理篇/调度和时间片.md",
     "react/public/Pasted image 20231202174113.png",
@@ -187,7 +188,6 @@
     "react/原理篇/public",
     "Excalidraw/react.md",
     "react/原理篇/事件原理.md",
-    "react/基础篇/04_props.md",
     "react/原理篇/react-router.md",
     "react/原理篇",
     "react/优化篇",
