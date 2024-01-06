@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ensureRootIsScheduled",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,8 +77,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -168,13 +167,13 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "4dbaeef10b44b8de",
+  "active": "990de575a3596e03",
   "lastOpenFiles": [
     "react/原理篇/hooks.md",
+    "react/v18.md",
     "react/基础篇/03_state.md",
     "react/基础篇/04_props.md",
     "react/原理篇/fiber.md",
-    "react/v18.md",
     "react/基础篇/02_组件.md",
     "react/原理篇/beginWork和render全流程.md",
     "react/优化篇/优化.md",

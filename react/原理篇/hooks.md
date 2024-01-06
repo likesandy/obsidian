@@ -249,7 +249,6 @@ function updateReducer() {
 在 [[fiber]] 章节讲了，在 render 阶段，实际没有进行真正的 DOM 元素的增加，删除，React 把想要做的不同操作打成不同的 effectTag ，等到commit 阶段，统一处理这些副作用，包括 DOM 元素增删改，执行一些生命周期等。hooks 中的 useEffect 和 useLayoutEffect 也是副作用，接下来以 effect 为例子，看一下 React 是如何处理 useEffect 副作用的
 ```jsx
 function mountEffect(create, deps) {
-function mountEffect(create, deps) {
   return mountEffectImpl(create, deps);
 }
 
